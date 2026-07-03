@@ -239,8 +239,8 @@ img{display:block;width:100%;height:100%;object-fit:cover}
     position:relative;
     overflow:hidden;
 
-    height:100px;
-    padding:.8rem;
+    height:150px;
+    padding:.6rem;
 
     border-radius:16px;
     background:rgba(255,255,255,.08);
@@ -281,13 +281,13 @@ img{display:block;width:100%;height:100%;object-fit:cover}
     align-items:center;
     text-align:center;
 
-    padding:.8rem;
+    padding:.6rem;
 
     background:linear-gradient(135deg,#014546,#008c5b);
 
     color:#fff;
     font-size:.72rem;
-    line-height:1.4;
+    line-height:1;
 
     opacity:0;
     transition:.3s ease;
@@ -346,6 +346,494 @@ img{display:block;width:100%;height:100%;object-fit:cover}
 @media(max-width:980px){.premium-gallery{grid-template-columns:repeat(6,1fr);grid-auto-rows:190px}.gallery-item.large,.gallery-item.wide{grid-column:span 6}.gallery-item.medium,.gallery-item.small{grid-column:span 3}.video-card{grid-template-columns:1fr}.impact-image-grid{grid-template-columns:1fr}}
 @media(max-width:600px){.premium-gallery{grid-template-columns:1fr;grid-auto-rows:260px}.gallery-item.large,.gallery-item.medium,.gallery-item.wide,.gallery-item.small{grid-column:1;grid-row:span 1}.gallery-section,.video-section{padding:4rem 1rem}.video-card{padding:1rem;border-radius:24px}.impact-image{height:240px}}
 
+.philosophy-section{
+    background:#014546;
+    padding:90px 32px;
+}
+
+.philosophy-container{
+    max-width:1200px;
+    margin:0 auto;
+    text-align:center;
+}
+
+.philosophy-label{
+    color:#e0ad68;
+    text-transform:uppercase;
+    letter-spacing:.22em;
+    font-size:.78rem;
+    font-weight:800;
+    margin-bottom:1rem;
+}
+
+.philosophy-title{
+    font-family:var(--display);
+    font-size:clamp(2.2rem,4vw,4rem);
+    font-weight:500;
+    color:#fff;
+    line-height:1.1;
+    margin-bottom:3rem;
+}
+
+.philosophy-title em{
+    color:#e0ad68;
+    font-style:italic;
+}
+
+.philosophy-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:1.4rem;
+}
+
+.philosophy-card{
+    position:relative;
+    overflow:hidden;
+    min-height:260px;
+    padding:2rem 1.4rem;
+    border-radius:24px;
+    background:rgba(255,255,255,.07);
+    border:1px solid rgba(255,255,255,.16);
+    transition:.4s ease;
+    cursor:pointer;
+}
+
+.philosophy-card:hover{
+    transform:translateY(-8px);
+    background:rgba(255,255,255,.11);
+    border-color:rgba(224,173,104,.45);
+    box-shadow:0 20px 45px rgba(0,0,0,.22);
+}
+
+.philosophy-icon{
+    width:76px;
+    height:76px;
+    margin:0 auto 1.4rem;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:rgba(0,140,91,.22);
+    border:1px solid rgba(224,173,104,.45);
+    font-size:2rem;
+}
+
+.philosophy-card h3{
+    font-family:var(--display);
+    color:#fff;
+    font-size:1.55rem;
+    line-height:1.2;
+    font-weight:500;
+}
+
+/* Hidden hover info */
+.philosophy-card p{
+    position:absolute;
+    inset:0;
+    padding:2rem;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    background:linear-gradient(135deg,#014546,#008c5b);
+    color:#fff;
+    font-size:.95rem;
+    line-height:1.7;
+    opacity:0;
+    transform:translateY(20px);
+    transition:.35s ease;
+}
+
+.philosophy-card:hover p{
+    opacity:1;
+    transform:translateY(0);
+}
+
+@media(max-width:1000px){
+    .philosophy-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:600px){
+    .philosophy-grid{
+        grid-template-columns:1fr;
+    }
+
+    .philosophy-section{
+        padding:70px 20px;
+    }
+}
+/* ==========================
+   FOUNDING CONVICTION
+========================== */
+
+.conviction-section{
+    background:#014546;
+    padding:50px 15px;
+}
+
+.conviction-card{
+    max-width:900px;
+    margin:auto;
+
+    position:relative;
+    overflow:hidden;
+
+    background:linear-gradient(135deg,#01534d,#014546);
+
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:28px;
+
+    padding:40px 40px;
+
+    text-align:center;
+
+    box-shadow:0 30px 80px rgba(0,0,0,.28);
+}
+
+/* Decorative leaves */
+
+.conviction-card::before{
+    content:"🌿";
+    position:absolute;
+    left:35px;
+    top:40px;
+    font-size:7rem;
+    opacity:.06;
+}
+
+.conviction-card::after{
+    content:"🌿";
+    position:absolute;
+    right:35px;
+    bottom:25px;
+    font-size:7rem;
+    opacity:.06;
+    transform:rotate(180deg);
+}
+
+.conviction-icon{
+    width:40px;
+    height:40px;
+
+    margin:0 auto 30px;
+
+    border-radius:50%;
+    border:2px solid #e0ad68;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:1.25rem;
+
+    color:#e0ad68;
+
+    background:rgba(255,255,255,.04);
+}
+
+.conviction-label{
+    color:#e0ad68;
+    letter-spacing:.25em;
+    font-size:.75rem;
+    font-weight:700;
+    text-transform:uppercase;
+    margin-bottom:20px;
+}
+
+.conviction-quote{
+
+    font-family:var(--display);
+
+    font-size:clamp(2rem,4vw,4rem);
+
+    line-height:1;
+
+    color:#fff;
+
+    max-width:900px;
+
+    margin:auto;
+}
+
+.conviction-quote span{
+    color:#8FD46D;
+    font-style:italic;
+}
+
+.conviction-quote strong{
+    color:#ffffff;
+    font-weight:700;
+}
+
+.conviction-author{
+
+    margin-top:35px;
+
+    color:rgba(255,255,255,.65);
+
+    font-size:1rem;
+
+    letter-spacing:.12em;
+
+    text-transform:uppercase;
+}
+
+@media(max-width:900px){
+
+.conviction-card{
+
+    padding:25px 15px;
+
+}
+
+.conviction-quote{
+
+    font-size:1.2rem;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.conviction-section{
+
+    padding:40px 10px;
+
+}
+
+.conviction-quote{
+
+    font-size:1rem;
+
+}
+
+.conviction-icon{
+
+    width:50px;
+    height:50px;
+
+}
+
+}
+/* ===================================
+   LIVING THEORY OF CHANGE
+=================================== */
+
+.living-tree{
+    background:#014546;
+    padding:30px 10px;
+}
+
+.living-tree .container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.section-label{
+    text-transform:uppercase;
+    letter-spacing:.25em;
+    color:#e0ad68;
+    font-size:.8rem;
+    font-weight:700;
+    text-align:center;
+}
+
+.section-title{
+    text-align:center;
+    font-family:var(--display);
+    color:#fff;
+    font-size:clamp(2.4rem,4vw,4.4rem);
+    margin:18px 0;
+}
+
+.section-title em{
+    color:#e0ad68;
+    font-style:italic;
+}
+
+.section-subtitle{
+    text-align:center;
+    color:rgba(255,255,255,.75);
+    max-width:760px;
+    margin:auto auto 70px;
+    line-height:1.8;
+}
+
+.tree-wrapper{
+
+    position:relative;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+
+    gap:20px;
+}
+
+.tree-line{
+
+    position:absolute;
+
+    left:6%;
+    right:6%;
+    top:45px;
+
+    height:6px;
+
+    background:linear-gradient(to right,#2E8B57,#59B66D,#A3D977,#E0AD68);
+
+    border-radius:50px;
+
+}
+
+.tree-stage{
+
+    position:relative;
+
+    width:200px;
+
+    text-align:center;
+
+    z-index:2;
+}
+
+.tree-circle{
+
+    width:90px;
+    height:90px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:#0a6658;
+
+    border:2px solid rgba(224,173,104,.5);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:2.2rem;
+
+    transition:.35s;
+}
+
+.tree-stage h4{
+
+    color:#fff;
+
+    margin-top:18px;
+
+    font-family:var(--display);
+
+    font-size:1.45rem;
+
+}
+
+.tree-info{
+
+    position:absolute;
+
+    left:50%;
+    transform:translateX(-50%) translateY(10px);
+
+    width:240px;
+
+    background:#ffffff;
+
+    color:#234;
+
+    padding:18px;
+
+    border-radius:18px;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.25);
+
+    opacity:0;
+
+    transition:.35s;
+
+    margin-top:18px;
+
+    font-size:.9rem;
+
+    line-height:1.7;
+}
+
+.tree-stage:hover .tree-circle{
+
+    transform:translateY(-8px) scale(1.08);
+
+    background:#008c5b;
+
+}
+
+.tree-stage:hover .tree-info{
+
+    opacity:1;
+
+    transform:translateX(-50%) translateY(0);
+
+}
+
+@media(max-width:1000px){
+
+.tree-wrapper{
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+.tree-line{
+
+    display:none;
+
+}
+
+.tree-stage{
+
+    width:100%;
+
+    margin-bottom:50px;
+
+}
+
+.tree-info{
+
+    position:relative;
+
+    opacity:1;
+
+    transform:none;
+
+    width:100%;
+
+    margin-top:20px;
+
+}
+
+}
+/* ═══════════════════════════════════════════════════
+   TEAM — EDITORIAL STYLE
+═══════════════════════════════════════════════════ */
+.team-section{padding:5.5rem 2rem;background:var(--cream)}
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:3rem}
+.team-card{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;transition:all var(--dur)}
+.team-card:hover{transform:translateY(-3px);box-shadow:0 16px 48px rgba(26,74,64,.1)}
+.team-photo{height:200px;background:linear-gradient(135deg,var(--green-deep) 0%,#0d3325 100%);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.team-photo::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 40% 50%,rgba(75,191,122,.1) 0%,transparent 60%)}
+.team-photo-initials{font-family:var(--display);font-size:2.5rem;font-weight:500;color:rgba(255,255,255,.35);position:relative;z-index:1}
+.team-photo-label{position:absolute;bottom:.875rem;left:1rem;right:1rem;font-size:.65rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.3);text-align:center}
+.team-body{padding:1.75rem}
+.team-name{font-family:var(--display);font-size:1.1rem;font-weight:500;color:var(--green-deep);margin-bottom:.2rem}
+.team-role{font-size:.78rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--green-mid);margin-bottom:.875rem}
+.team-bio{font-size:.875rem;color:var(--ink-muted);line-height:1.6}
 </style>
 </head>
 <body>
@@ -387,7 +875,7 @@ img{display:block;width:100%;height:100%;object-fit:cover}
     <nav aria-label="Breadcrumb"><ol class="breadcrumb"><li><a href="index.html">Home</a></li><li>About</li></ol></nav>
     <p class="page-eyebrow">Who We Are</p>
     <h1 class="page-h1">Built for fifty years, <em>not fifty months.</em></h1>
-    <p class="page-sub">We are building an institution for compassionate food systems. Children are our entry point. Compassion is our destination. Food is the medium.</p>
+    <p class="page-sub">Not another NGO. Not a charity programme. We are building an institution for compassionate food systems. Children are our entry point. Compassion is our destination. Food is the medium.</p>
   </div>
 </section>
 
@@ -401,6 +889,33 @@ img{display:block;width:100%;height:100%;object-fit:cover}
     <div style="display:flex;align-items:center;gap:3rem"><div style="width:10px;height:10px;border-radius:50%;background:var(--taupe);flex-shrink:0"></div><div><div style="font-size:1rem;color:var(--muted)">Presence</div><div style="font-family:var(--display);font-size:1rem;font-weight:500;color:var(--deep)">6 States of India</div></div></div>
   </div>
 </div>
+<!-- FOUNDING CONVICTION -->
+<section class="conviction-section">
+
+    <div class="conviction-card">
+
+        <div class="conviction-icon">
+            🌱
+        </div>
+
+        <p class="conviction-label">
+            THE FOUNDING CONVICTION
+        </p>
+
+        <blockquote class="conviction-quote">
+            “A child who understands where
+            <span>food</span> comes from becomes an
+            <strong>adult</strong> who understands the
+            <span>world.</span>”
+        </blockquote>
+
+        <p class="conviction-author">
+            — Bodhi Greens Foundation
+        </p>
+
+    </div>
+
+</section>
 
 <!-- VIDEO SECTION -->
 <section class="video-section" aria-label="Bodhi Greens video">
@@ -421,16 +936,12 @@ img{display:block;width:100%;height:100%;object-fit:cover}
   <div class="container about-pro-grid">
     <div class="about-card rev">
       <p class="label">Our Story</p>
-      <h2 class="h2">Rooted in nature. <em>Driven by people.</em></h2>
-      <p class="lead">Bodhi Greens Foundation exists to turn environmental responsibility into practical, community-led action.</p>
-      <p>We work with schools, communities, institutions, businesses and public partners to restore ecosystems, strengthen climate resilience and create a more sustainable future.</p>
-      <p>Our programmes connect ecological restoration, climate education, nutrition awareness, school gardens, water conservation and community participation. Instead of short-term activities, we design initiatives that are inclusive, measurable and scalable.</p>
-      <div class="pill-row">
-        <span class="pill">Climate Action</span>
-        <span class="pill">School Programmes</span>
-        <span class="pill">Community Engagement</span>
-        <span class="pill">Ecological Restoration</span>
-      </div>
+      <h2 class="h2">India has a nutrition crisis.
+                     <em>But the root is not food.</em></h2>
+      <p class="lead">The root is how we think about food — how we teach it, grow it, share it, and understand its place in the world.</p>
+      <p>35.5% of Indian children under 5 are stunted (NFHS-5). 67% of childhood anaemia is linked to inadequate dietary diversity (UNICEF, 2022). 1 in 3 Indian adults will face a diet-related chronic disease by 2035 (ICMR-NIN).</p>
+      <p>These are not numbers about food. They are numbers about knowledge — what teachers know, what families believe, what communities value, and what systems reward.</p>
+      <p>Bodhi Greens was founded on the conviction that this is a design problem, not a resource problem. And design problems require systems thinking.</p>
     </div>
     <div class="about-image rev-r">
       <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1100&q=80" alt="Children learning together in a classroom environment" loading="lazy">
@@ -438,6 +949,82 @@ img{display:block;width:100%;height:100%;object-fit:cover}
     </div>
   </div>
 </section>
+
+<section class="philosophy-section">
+    <div class="philosophy-container">
+
+        <p class="philosophy-label">Our Philosophy</p>
+
+        <h2 class="philosophy-title">
+            Four beliefs that guide <em>every decision.</em>
+        </h2>
+
+        <div class="philosophy-grid">
+
+            <!-- Card 1 -->
+            <div class="philosophy-card">
+                <div class="philosophy-icon">⚙️</div>
+
+                <h3>Systems before solutions</h3>
+
+                <p>
+                    We understand the system before designing the intervention.
+                    We identify leverage points where small, strategic changes
+                    create the greatest long-term impact and focus our efforts there.
+                </p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="philosophy-card">
+                <div class="philosophy-icon">📊</div>
+
+                <h3>Evidence before advocacy</h3>
+
+                <p>
+                    Every claim we make is supported by evidence. We clearly
+                    distinguish between what has been measured, what has been
+                    observed, and what remains a hypothesis, ensuring transparency
+                    in everything we communicate.
+                </p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="philosophy-card">
+                <div class="philosophy-icon">💚</div>
+
+                <h3>Compassion as the destination</h3>
+
+                <p>
+                    Food is more than nutrition—it is a pathway to compassion.
+                    We nurture care for oneself, for other people, for animals,
+                    and for the natural systems that sustain life.
+                </p>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="philosophy-card">
+                <div class="philosophy-icon">🌱</div>
+
+                <h3>Honesty about what we don't know</h3>
+
+                <p>
+                    We are continuously learning. We openly share what we know,
+                    acknowledge uncertainties, and integrate monitoring and
+                    evaluation into every programme to improve with evidence.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="philosophy-note">
+            🌿 These beliefs are not just principles—they shape every programme,
+            partnership, decision, and outcome at Bodhi Greens Foundation.
+        </div>
+
+    </div>
+</section>
+
+
 
 <section class="section section-cream" aria-label="Vision and mission">
   <div class="container">
@@ -450,6 +1037,84 @@ img{display:block;width:100%;height:100%;object-fit:cover}
       <div class="info-card rev d2"><span class="tag">Promise</span><h3>Impact beyond individual projects.</h3><p>We work with transparency, accountability and compassion so every contribution creates long-term value for people and the planet.</p></div>
     </div>
   </div>
+</section>
+
+<!-- LIVING THEORY OF CHANGE -->
+<section class="living-tree">
+
+    <div class="container">
+
+        <p class="section-label">Signature Visual</p>
+
+        <h2 class="section-title">
+            The Living <em>Theory of Change</em>
+        </h2>
+
+        <p class="section-subtitle">
+            Inputs become roots. Activities become trunk.
+            Outputs become branches. Outcomes become leaves.
+            Impact becomes the fruit.
+            <strong>Hover each element to explore.</strong>
+        </p>
+
+        <div class="tree-wrapper">
+
+            <div class="tree-line"></div>
+
+            <div class="tree-stage stage1">
+                <div class="tree-circle">🌱</div>
+                <h4>Inputs</h4>
+
+                <div class="tree-info">
+                    Resources, educators, curriculum, partnerships,
+                    funding and evidence that nourish the programme.
+                </div>
+            </div>
+
+            <div class="tree-stage stage2">
+                <div class="tree-circle">🌳</div>
+                <h4>Activities</h4>
+
+                <div class="tree-info">
+                    Teacher training, classroom learning,
+                    school gardens and parent engagement.
+                </div>
+            </div>
+
+            <div class="tree-stage stage3">
+                <div class="tree-circle">🌿</div>
+                <h4>Outputs</h4>
+
+                <div class="tree-info">
+                    Students reached, teachers trained,
+                    schools supported and sessions delivered.
+                </div>
+            </div>
+
+            <div class="tree-stage stage4">
+                <div class="tree-circle">🍃</div>
+                <h4>Outcomes</h4>
+
+                <div class="tree-info">
+                    Better food literacy, healthier choices,
+                    stronger school participation and community awareness.
+                </div>
+            </div>
+
+            <div class="tree-stage stage5">
+                <div class="tree-circle">🍎</div>
+                <h4>Impact</h4>
+
+                <div class="tree-info">
+                    A compassionate food system where healthier
+                    children grow into informed and responsible adults.
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
 </section>
 
 <section class="section section-white" aria-label="How we work">
@@ -473,12 +1138,12 @@ img{display:block;width:100%;height:100%;object-fit:cover}
     <h2 class="h2">The principles behind our <em>work.</em></h2>
     <p class="lead-text">These values shape how we design programmes, collaborate with communities and report outcomes.</p>
     <div class="values-grid">
-      <div class="value-card rev"><i>🌱</i><h3>Sustainability</h3><p>We focus on solutions that protect natural resources and create long-term value.</p></div>
-      <div class="value-card rev d1"><i>🤝</i><h3>Collaboration</h3><p>We partner with communities, institutions, companies and public bodies.</p></div>
-      <div class="value-card rev d2"><i>📈</i><h3>Accountability</h3><p>We report clearly, measure honestly and continuously improve our work.</p></div>
-      <div class="value-card rev"><i>💚</i><h3>Compassion</h3><p>People are at the heart of every programme, decision and outcome.</p></div>
-      <div class="value-card rev d1"><i>🌍</i><h3>Innovation</h3><p>We use creative, evidence-based ideas to solve environmental challenges.</p></div>
-      <div class="value-card rev d2"><i>🛡️</i><h3>Integrity</h3><p>We act with transparency, ethics and respect for communities and nature.</p></div>
+      <div class="value-card rev"><i>🌱</i><h3>Transparency over appearance</h3><p>We report what is real, including what isn't working. Our transparency page is a genuine record, not a performance.</p></div>
+      <div class="value-card rev d1"><i>🤝</i><h3>Precision over sentiment</h3><p>We do not claim to be "changing lives" without evidence. Language is accountability. Every claim has a source.</p></div>
+      <div class="value-card rev d2"><i>📈</i><h3>Systems over silos</h3><p>No programme exists in isolation. Every intervention is designed with its second and third-order effects in mind.</p></div>
+      <div class="value-card rev"><i>💚</i><h3>Long time horizons</h3><p>We make decisions as if we will be here in 50 years. Institutional memory, longitudinal data, and patient strategy.</p></div>
+      <div class="value-card rev d1"><i>🌍</i><h3>Compassion as rigour</h3><p>Compassion for children, animals, and ecosystems is not a soft goal. It is a measurable, teachable, evidence-backed orientation.</p></div>
+      <div class="value-card rev d2"><i>🛡️</i><h3>Knowledge as a public good</h3><p>Everything we learn belongs to the public. The Knowledge Hub exists to give away everything we know — freely, forever.</p></div>
     </div>
   </div>
 </section>
@@ -541,6 +1206,55 @@ img{display:block;width:100%;height:100%;object-fit:cover}
 </section>
 
 
+<!-- ═══════════════════════════════════════════════════
+     SECTION 12: TEAM CARDS
+═══════════════════════════════════════════════════ -->
+<section class="team-section" aria-labelledby="team-h">
+  <div class="container">
+    <p class="label">Who leads the work</p>
+    <h2 class="h2" id="team-h" style="margin-bottom:.75rem">Team &amp; <em>Governance</em></h2>
+    <p style="font-size:.95rem;color:var(--ink-muted);max-width:540px;margin-bottom:0">We keep the team small and the work deep. Full governance details are on our <a href="transparency.html" style="color:var(--green-mid);font-weight:500">Transparency page</a>.</p>
+    <div class="team-grid">
+      <article class="team-card rev">
+        <div class="team-photo" aria-hidden="true">
+          <div class="team-photo-initials">BG</div>
+          <div class="team-photo-label">📷 Founder portrait · Editorial style</div>
+        </div>
+        <div class="team-body">
+          <div class="team-name">Founding Director</div>
+          <div class="team-role">Programme Strategy &amp; Institutional Development</div>
+          <div class="team-bio">Leads overall vision, programme design, and institutional development. Committed to building an organisation that matters in 2045 as much as it does today.</div>
+        </div>
+      </article>
+      <article class="team-card rev d1">
+        <div class="team-photo" aria-hidden="true">
+          <div class="team-photo-initials">NE</div>
+          <div class="team-photo-label">📷 Educator portrait · Classroom context</div>
+        </div>
+        <div class="team-body">
+          <div class="team-name">Nutrition Education Lead</div>
+          <div class="team-role">Teacher Training &amp; Curriculum Design</div>
+          <div class="team-bio">Designs and delivers the teacher training programme and school nutrition curriculum. Has trained 48+ teachers across 3 states.</div>
+        </div>
+      </article>
+      <article class="team-card rev d2">
+        <div class="team-photo" aria-hidden="true">
+          <div class="team-photo-initials">ME</div>
+          <div class="team-photo-label">📷 Field coordinator portrait · Outdoor</div>
+        </div>
+        <div class="team-body">
+          <div class="team-name">M&amp;E Coordinator</div>
+          <div class="team-role">Monitoring, Evaluation &amp; Learning</div>
+          <div class="team-bio">Manages all programme monitoring, data collection, and evaluation. Every outcome on our Impact page flows through this work.</div>
+        </div>
+      </article>
+    </div>
+    <div style="margin-top:2rem;padding:1.5rem;background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);display:flex;align-items:flex-start;gap:.875rem;max-width:640px">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" style="flex-shrink:0;margin-top:2px" aria-hidden="true"><circle cx="10" cy="10" r="9" stroke="var(--green-mid)" stroke-width="1.25"/><path d="M10 6v5M10 13v.5" stroke="var(--green-mid)" stroke-width="1.25" stroke-linecap="round"/></svg>
+      <p style="font-size:.875rem;color:var(--ink-muted);line-height:1.65">We are building our advisory board. If you have expertise in nutrition science, food systems, education, or public health and care about long-horizon work, <a href="contact.html" style="color:var(--green-mid);font-weight:500">we'd love to hear from you</a>.</p>
+    </div>
+  </div>
+</section>
 
 
 

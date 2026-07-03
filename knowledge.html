@@ -220,6 +220,15 @@ img{display:block;width:100%;height:100%;object-fit:cover}
 .path-lessons li::before{content:'→';color:var(--amber);flex-shrink:0}
 @media(max-width:900px){.feat-grid{grid-template-columns:1fr}.lib-grid{grid-template-columns:1fr 1fr}.path-grid{grid-template-columns:1fr}}
 @media(max-width:600px){.lib-grid{grid-template-columns:1fr}.hero-stat-chips{display:none}}
+.external-section{padding:5.5rem 2rem;background:var(--bg-alt)}
+.ext-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+.ext-card{border-radius:var(--r-lg);padding:1.75rem;background:#fff;border:1px solid var(--line);transition:all var(--dur);display:block;text-decoration:none}
+.ext-card:hover{border-color:var(--green-mid);transform:translateY(-2px);box-shadow:0 12px 36px rgba(26,74,64,.09)}
+.ext-card-domain{font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green-mid);margin-bottom:.375rem}
+.ext-card-name{font-family:var(--display);font-size:1rem;font-weight:500;color:var(--green-deep);margin-bottom:.5rem}
+.ext-card-desc{font-size:.82rem;color:var(--ink-muted);line-height:1.6;margin-bottom:.75rem}
+.ext-card-link{font-size:.72rem;color:var(--ink-muted);display:flex;align-items:center;gap:.375rem}
+.ext-card-link svg{flex-shrink:0;opacity:.5}
 </style>
 </head>
 <body>
@@ -269,12 +278,12 @@ img{display:block;width:100%;height:100%;object-fit:cover}
   <div class="hero-kn-content">
     <nav aria-label="Breadcrumb"><ol class="breadcrumb"><li><a href="index.html">Home</a></li><li>Knowledge Hub</li></ol></nav>
     <p class="page-eyebrow">Knowledge Hub</p>
-    <h1 class="page-h1">Everything we know, <em>freely shared.</em></h1>
+    <h1 class="page-h1">The knowledge <br><em>Galaxy.</em></h1>
     <p class="page-sub">A growing public library on child nutrition, food systems, teacher education, and compassionate living. For researchers, educators, and communities — at no cost.</p>
   </div>
   <div class="hero-stat-chips" aria-label="Collection stats">
-    <div class="stat-chip"><div class="chip-num">48+</div><div class="chip-lbl">Resources in library</div></div>
-    <div class="stat-chip"><div class="chip-num">6</div><div class="chip-lbl">Topic collections</div></div>
+    <div class="stat-chip"><div class="chip-num">20+</div><div class="chip-lbl">Resources in library</div></div>
+    <div class="stat-chip"><div class="chip-num">7</div><div class="chip-lbl">Knowledge Domains</div></div>
     <div class="stat-chip"><div class="chip-num">Free</div><div class="chip-lbl">Always, forever</div></div>
   </div>
 </section>
@@ -335,7 +344,7 @@ img{display:block;width:100%;height:100%;object-fit:cover}
   <div class="container">
     <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:2.5rem;flex-wrap:wrap;gap:1rem">
       <div><p class="label rev">Full Library</p><h2 class="h2 rev d1" id="lib-h">Resources for <em>everyone.</em></h2></div>
-      <a href="#" class="btn btn-outline btn-sm rev d2">View all 48+ resources</a>
+      <a href="#" class="btn btn-outline btn-sm rev d2">View all 20+ resources</a>
     </div>
     <div class="lib-grid">
       <div class="lib-card rev"><div class="lib-icon" style="background:rgba(0,140,91,.1)">📚</div><div><div class="lib-type" style="color:var(--green)">Curriculum Guide</div><div class="lib-title">Nutrition Education for Grades 3–5: Complete Teacher Guide</div></div><div class="lib-desc">A 12-session classroom curriculum with lesson plans, activities, and assessment tools — aligned to NCERT learning objectives.</div><div class="lib-meta">PDF · 84 pages · Hindi &amp; English</div><span class="lib-dl">↓ Free Download</span></div>
@@ -361,6 +370,72 @@ img{display:block;width:100%;height:100%;object-fit:cover}
     </div>
   </div>
 </section>
+
+<!-- ════ EXTERNAL RESOURCES ════ -->
+<section class="external-section" aria-labelledby="ext-h">
+  <div class="container">
+    <p class="label">Beyond our walls</p>
+    <h2 class="h2" id="ext-h" style="margin-bottom:.75rem">Curated external <em>resources.</em></h2>
+    <p style="font-size:1rem;color:var(--ink-muted);margin-bottom:2.5rem;max-width:560px">Trusted organisations whose work informs ours. We curate these with the same care as our own — not endorsements of every position, but sources we consult and recommend.</p>
+    <div class="ext-grid">
+      <a href="https://nutritionfacts.org" target="_blank" rel="noopener" class="ext-card rev">
+        <div class="ext-card-domain">Nutrition Science</div>
+        <div class="ext-card-name">NutritionFacts.org</div>
+        <div class="ext-card-desc">Dr. Michael Greger's rigorously sourced video and article library on whole food plant-based nutrition. One of the most evidence-dense free resources available.</div>
+        <div class="ext-card-link"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 10L10 2M10 2H5M10 2v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>nutritionfacts.org</div>
+      </a>
+      <a href="https://sharan-india.org" target="_blank" rel="noopener" class="ext-card rev d1">
+        <div class="ext-card-domain">India · Nutrition</div>
+        <div class="ext-card-name">SHARAN India</div>
+        <div class="ext-card-desc">Whole food plant-based health and lifestyle medicine in the Indian context. Excellent for dietary guidance relevant to Indian food culture and ingredients.</div>
+        <div class="ext-card-link"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 10L10 2M10 2H5M10 2v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>sharan-india.org</div>
+      </a>
+      <a href="https://proveg.com" target="_blank" rel="noopener" class="ext-card rev d2">
+        <div class="ext-card-domain">Food Systems</div>
+        <div class="ext-card-name">ProVeg International</div>
+        <div class="ext-card-desc">Food systems research on plant-based protein transitions, school food environments, and food policy. Active India programme.</div>
+        <div class="ext-card-link"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 10L10 2M10 2H5M10 2v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>proveg.com</div>
+      </a>
+      <a href="https://ciwf.org" target="_blank" rel="noopener" class="ext-card rev">
+        <div class="ext-card-domain">Animal Welfare</div>
+        <div class="ext-card-name">Compassion in World Farming</div>
+        <div class="ext-card-desc">Global leader in farm animal welfare policy, research, and food system advocacy. Foundational for understanding the animal welfare dimension of food systems.</div>
+        <div class="ext-card-link"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 10L10 2M10 2H5M10 2v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>ciwf.org</div>
+      </a>
+      <a href="https://eatforum.org" target="_blank" rel="noopener" class="ext-card rev d1">
+        <div class="ext-card-domain">Food Systems · Science</div>
+        <div class="ext-card-name">EAT-Lancet Commission</div>
+        <div class="ext-card-desc">The planetary health diet framework — the science of sustainable food systems for both human and planetary health. Essential reading for food systems work.</div>
+        <div class="ext-card-link"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 10L10 2M10 2H5M10 2v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>eatforum.org</div>
+      </a>
+      <a href="https://cgiar.org" target="_blank" rel="noopener" class="ext-card rev d2">
+        <div class="ext-card-domain">Agriculture · Research</div>
+        <div class="ext-card-name">CGIAR</div>
+        <div class="ext-card-desc">Global agricultural research with deep expertise on food systems, seed systems, and nutrition in developing countries. Authoritative data on Indian agriculture.</div>
+        <div class="ext-card-link"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 10L10 2M10 2H5M10 2v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>cgiar.org</div>
+      </a>
+      <a href="https://faunalytics.org" target="_blank" rel="noopener" class="ext-card rev">
+        <div class="ext-card-domain">Animal Welfare · Research</div>
+        <div class="ext-card-name">Faunalytics</div>
+        <div class="ext-card-desc">Evidence-based research on animal welfare effectiveness — behaviour change, advocacy, and public attitudes. Rigorous and freely accessible.</div>
+        <div class="ext-card-link"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 10L10 2M10 2H5M10 2v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>faunalytics.org</div>
+      </a>
+      <a href="https://nutritionstudies.org" target="_blank" rel="noopener" class="ext-card rev d1">
+        <div class="ext-card-domain">Nutrition Science</div>
+        <div class="ext-card-name">T. Colin Campbell Center</div>
+        <div class="ext-card-desc">Whole food plant-based nutrition science — home of The China Study and a library of peer-reviewed research on diet and chronic disease.</div>
+        <div class="ext-card-link"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 10L10 2M10 2H5M10 2v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>nutritionstudies.org</div>
+      </a>
+      <a href="https://animalcharityevaluators.org" target="_blank" rel="noopener" class="ext-card rev d2">
+        <div class="ext-card-domain">Effectiveness Research</div>
+        <div class="ext-card-name">Animal Charity Evaluators</div>
+        <div class="ext-card-desc">Evidence-based evaluation of animal welfare interventions and organisations. Brings rigour to a field that often lacks it.</div>
+        <div class="ext-card-link"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 10L10 2M10 2H5M10 2v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>animalcharityevaluators.org</div>
+      </a>
+    </div>
+  </div>
+</section>
+
 
 <!-- DOWNLOADS CTA -->
 <section class="section section-cream" id="downloads" aria-labelledby="dl-h">

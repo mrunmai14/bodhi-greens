@@ -247,11 +247,139 @@ img{display:block;width:100%;height:100%;object-fit:cover}
 .footer__legal a{font-size:.75rem;color:rgba(255,255,255,.22);transition:color var(--dur)}
 .footer__legal a:hover{color:rgba(255,255,255,.5)}
 
+.stat-disclaimer{text-align:center;margin-top:1.25rem;font-size:.78rem;color:var(--ink-muted)}
+
 /* RESPONSIVE */
 @media(max-width:1024px){.impact-strip__inner{grid-template-columns:repeat(2,1fr)}.testi-grid{grid-template-columns:1fr 1fr}.fund-cards{grid-template-columns:1fr}}
 @media(max-width:900px){.nav__links{display:none}.nav__burger{display:flex;align-items:center}.mission__grid,.crisis__grid{grid-template-columns:1fr}.mission__text{padding:3rem 2rem}.footer__top{grid-template-columns:1fr 1fr}}
 @media(max-width:768px){.testi-grid{grid-template-columns:1fr}.mosaic{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto}.m-a,.m-b,.m-c,.m-d,.m-e{grid-column:auto;grid-row:auto;aspect-ratio:4/3}}
 @media(max-width:600px){.hero__stats{gap:1.5rem}.footer__top{grid-template-columns:1fr}.impact-strip__inner{grid-template-columns:1fr 1fr}}
+
+.pillars-section{
+    background:#014546;
+    padding:80px 30px;
+}
+
+.pillars-container{
+    max-width:1200px;
+    margin:0 auto;
+    text-align:center;
+}
+
+.pillars-label{
+    color:#e0ad68;
+    text-transform:uppercase;
+    letter-spacing:.25em;
+    font-size:.75rem;
+    font-weight:800;
+    margin-bottom:12px;
+}
+
+.pillars-title{
+    font-family:var(--display);
+    color:#fff;
+    font-size:clamp(2rem,4vw,4rem);
+    font-weight:500;
+    line-height:1.1;
+    text-align:center;
+}
+
+.pillars-title em{
+    color:#e0ad68;
+    font-style:italic;
+}
+
+.pillars-subtitle{
+    color:rgba(255,255,255,.75);
+    margin:14px auto 36px;
+    font-size:1rem;
+}
+
+
+
+.pillars-grid{
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    gap:14px;
+
+    margin-top:60px;
+    margin-bottom:40px;
+}
+
+.pillar-card{
+    position:relative;
+    height:150px;
+    background:#fff;
+    border-radius:18px;
+    padding:18px 12px;
+    overflow:hidden;
+    cursor:pointer;
+    box-shadow:0 16px 38px rgba(0,0,0,.18);
+    transition:.35s ease;
+    text-align:center;
+}
+
+.pillar-card:hover{
+    transform:translateY(-6px);
+}
+
+.pillar-icon{
+    width:48px;
+    height:48px;
+    margin:0 auto 12px;
+    border-radius:50%;
+    background:rgba(0,140,91,.10);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:1.35rem;
+}
+
+.pillar-card h3{
+    font-family:var(--display);
+    color:#014546;
+    font-size:1.05rem;
+    line-height:1.25;
+    margin:0;
+}
+
+.pillar-card p{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(135deg,#014546,#008c5b);
+    color:#fff;
+    padding:16px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    font-size:.76rem;
+    line-height:1.5;
+    opacity:0;
+    transition:.3s ease;
+}
+
+.pillar-card:hover p{
+    opacity:1;
+}
+
+@media(max-width:1200px){
+    .pillars-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+}
+
+@media(max-width:700px){
+    .pillars-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:480px){
+    .pillars-grid{
+        grid-template-columns:1fr;
+    }
+}
 </style>
 </head>
 <body>
@@ -344,6 +472,44 @@ img{display:block;width:100%;height:100%;object-fit:cover}
   </div>
 </div>
 
+<!-- WHY THIS MATTERS — Animated problem overview -->
+<section style="padding:5.5rem 2rem;background:#fff" aria-labelledby="why-h">
+  <div style="max-width:1200px;margin:0 auto">
+    <div style="text-align:center;margin-bottom:3.5rem">
+      <p style="display:inline-flex;align-items:center;gap:.5rem;font-size:.7rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--green-mid);margin-bottom:.875rem" class="rev">
+        <span style="width:20px;height:1px;background:currentColor;display:block"></span>The problem we refuse to accept
+      </p>
+      <h2 class="h2 rev" id="why-h" style="text-align:center">India's nutrition crisis is not<br><em>what you think it is.</em></h2>
+      <p class="rev" style="font-size:1.05rem;color:var(--ink-muted);text-align:center;max-width:560px;margin:1rem auto 0;line-height:1.75;font-weight:300">The problem is not a shortage of food. It is a crisis of knowledge — what children learn, what families believe, and what systems reward.</p>
+    </div>
+    <!-- Three animated data visualisations -->
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2rem" role="list">
+      <div class="rev" role="listitem" style="border:1px solid var(--line);border-radius:16px;padding:2.5rem 2rem;background:var(--cream);position:relative;overflow:hidden">
+        <div style="font-family:var(--display);font-size:3.5rem;font-weight:700;color:var(--green-deep);line-height:1;letter-spacing:-.03em;margin-bottom:.5rem" data-count="35" data-suffix=".5%">0%</div>
+        <div style="font-size:.95rem;color:var(--ink-muted);line-height:1.5;margin-bottom:.875rem">of Indian children under 5 are stunted due to chronic undernutrition</div>
+        <div style="font-size:.7rem;color:rgba(26,74,64,.45);font-weight:600;letter-spacing:.05em">NFHS-5, Government of India, 2021</div>
+        <div style="position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(to right,var(--green-mid),var(--green-light));transform:scaleX(0);transform-origin:left;transition:transform 1.2s ease" class="prob-bar" data-w="0.355"></div>
+      </div>
+      <div class="rev d1" role="listitem" style="border:1px solid var(--line);border-radius:16px;padding:2.5rem 2rem;background:var(--cream);position:relative;overflow:hidden">
+        <div style="font-family:var(--display);font-size:3.5rem;font-weight:700;color:var(--green-deep);line-height:1;letter-spacing:-.03em;margin-bottom:.5rem" data-count="67" data-suffix="%">0%</div>
+        <div style="font-size:.95rem;color:var(--ink-muted);line-height:1.5;margin-bottom:.875rem">of childhood anaemia in India is linked to inadequate dietary diversity</div>
+        <div style="font-size:.7rem;color:rgba(26,74,64,.45);font-weight:600;letter-spacing:.05em">UNICEF State of the World's Children, 2022</div>
+        <div style="position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(to right,var(--earth),rgba(139,105,20,.4));transform:scaleX(0);transform-origin:left;transition:transform 1.2s ease 0.15s" class="prob-bar" data-w="0.67"></div>
+      </div>
+      <div class="rev d2" role="listitem" style="border:1px solid var(--line);border-radius:16px;padding:2.5rem 2rem;background:var(--cream);position:relative;overflow:hidden">
+        <div style="font-family:var(--display);font-size:3.5rem;font-weight:700;color:var(--green-deep);line-height:1;letter-spacing:-.03em;margin-bottom:.5rem">1 in 3</div>
+        <div style="font-size:.95rem;color:var(--ink-muted);line-height:1.5;margin-bottom:.875rem">Indian adults will face a diet-related chronic disease by 2035</div>
+        <div style="font-size:.7rem;color:rgba(26,74,64,.45);font-weight:600;letter-spacing:.05em">ICMR-NIN Dietary Guidelines, 2024</div>
+        <div style="position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(to right,rgba(139,105,20,.6),rgba(139,105,20,.2));transform:scaleX(0);transform-origin:left;transition:transform 1.2s ease 0.3s" class="prob-bar" data-w="0.33"></div>
+      </div>
+    </div>
+    <div class="rev" style="text-align:center;margin-top:2.5rem;padding:2rem;background:rgba(26,74,64,.04);border-radius:16px;border:1px solid rgba(26,74,64,.1);max-width:700px;margin-left:auto;margin-right:auto">
+      <p style="font-family:var(--display);font-size:1.2rem;font-weight:400;color:var(--green-deep);line-height:1.5;font-style:italic">"These statistics are not about food. They are about knowledge — and that is a problem that education can solve."</p>
+      <p style="font-size:.78rem;color:var(--ink-muted);margin-top:.625rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase">Bodhi Greens Foundation · Theory of Change</p>
+    </div>
+  </div>
+</section>
+
 <!-- MISSION SPLIT -->
 <section class="mission" aria-labelledby="mission-h">
   <div class="mission__grid">
@@ -363,6 +529,8 @@ img{display:block;width:100%;height:100%;object-fit:cover}
     </div>
   </div>
 </section>
+
+
 
 <!-- IMPACT NUMBERS -->
 <div class="impact-strip" role="region" aria-label="Key impact statistics">
@@ -388,6 +556,7 @@ img{display:block;width:100%;height:100%;object-fit:cover}
       <div class="i-bar-wrap"><div class="i-bar anim-bar" data-w="94"></div></div>
     </div>
   </div>
+  <p class="stat-disclaimer">Programme in early growth phase — numbers reflect verified activity through 2024–25.</p>
 </div>
 
 <!-- PROGRAMMES -->
@@ -440,6 +609,47 @@ img{display:block;width:100%;height:100%;object-fit:cover}
     </div>
 
   </div>
+  <div class="pillars-grid">
+
+      <div class="pillar-card">
+        <div class="pillar-icon">👩‍🏫</div>
+        <h3>Teacher Training</h3>
+        <p>Structured capacity building for educators in whole food nutrition science, classroom facilitation, and behaviour observation.</p>
+      </div>
+
+      <div class="pillar-card">
+        <div class="pillar-icon">🧒</div>
+        <h3>Student Activities</h3>
+        <p>Age-appropriate, hands-on nutrition sessions connecting food to health, culture, environment, and compassion.</p>
+      </div>
+
+      <div class="pillar-card">
+        <div class="pillar-icon">👨‍👩‍👧</div>
+        <h3>Parent Engagement</h3>
+        <p>Community sessions connecting school learning to the home, supporting families in informed food choices.</p>
+      </div>
+
+      <div class="pillar-card">
+        <div class="pillar-icon">📦</div>
+        <h3>School Toolkits & Nutrition Cards</h3>
+        <p>Designed classroom resources covering food groups, plant-based nutrition, seasonal eating, and indigenous crops.</p>
+      </div>
+
+      <div class="pillar-card">
+        <div class="pillar-icon">📋</div>
+        <h3>Monitoring & Evaluation</h3>
+        <p>Systematic monitoring of dietary habits, knowledge change, and programme adherence — evidence at every stage.</p>
+      </div>
+
+      <div class="pillar-card">
+        <div class="pillar-icon">🤲</div>
+        <h3>Volunteer Training</h3>
+        <p>Building trained nutrition volunteers who extend the programme's reach into communities beyond school walls.</p>
+      </div>
+
+    </div>
+
+  </div>
 </section>
 
 <!-- PULL QUOTE -->
@@ -477,7 +687,7 @@ img{display:block;width:100%;height:100%;object-fit:cover}
       </div>
     </div>
   </div>
-</section>
+  </section>
 
 <!-- WHY WE EXIST -->
 <section class="section" style="background:var(--cream)" aria-labelledby="why-h">

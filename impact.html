@@ -322,6 +322,349 @@ img{display:block;width:100%;height:100%;object-fit:cover}
 .ring-sub{font-size:.78rem;color:var(--muted);line-height:1.5}
 @media(max-width:900px){.ring-grid{grid-template-columns:repeat(2,1fr)}.story-grid{grid-template-columns:1fr}}
 @media(max-width:600px){.ring-grid{grid-template-columns:1fr 1fr}}
+.me-section{
+    background:#faf9f4;
+    padding:90px 30px;
+}
+
+.me-container{
+    max-width:1250px;
+    margin:0 auto;
+    text-align:center;
+}
+
+.me-label{
+    color:#008c5b;
+    text-transform:uppercase;
+    letter-spacing:.2em;
+    font-size:.75rem;
+    font-weight:800;
+    margin-bottom:12px;
+}
+
+.me-title{
+    font-family:var(--display);
+    color:#014546;
+    font-size:clamp(2rem,4vw,3.6rem);
+    font-weight:500;
+    line-height:1.1;
+}
+
+.me-title em{
+    color:#008c5b;
+    font-style:italic;
+}
+
+.me-subtitle{
+    max-width:680px;
+    margin:16px auto 45px;
+    color:#5c5754;
+    font-size:1rem;
+    line-height:1.7;
+}
+
+.me-track{
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    gap:16px;
+}
+
+.me-step{
+    position:relative;
+    min-height:210px;
+    background:#fff;
+    border:1px solid #ddd8ce;
+    border-radius:22px;
+    padding:22px 18px;
+    text-align:left;
+    box-shadow:0 14px 38px rgba(1,69,70,.07);
+    transition:.35s ease;
+}
+
+.me-step:hover{
+    transform:translateY(-7px);
+    border-color:rgba(0,140,91,.35);
+    box-shadow:0 24px 55px rgba(1,69,70,.14);
+}
+
+.me-step span{
+    display:inline-flex;
+    width:42px;
+    height:42px;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:#014546;
+    color:#fff;
+    font-weight:800;
+    margin-bottom:18px;
+}
+
+.me-step h3{
+    font-family:var(--display);
+    color:#014546;
+    font-size:1.25rem;
+    line-height:1.2;
+    margin-bottom:10px;
+}
+
+.me-step p{
+    color:#5c5754;
+    font-size:.85rem;
+    line-height:1.6;
+    margin-bottom:16px;
+}
+
+.me-step strong{
+    display:block;
+    color:#008c5b;
+    font-size:.78rem;
+    line-height:1.5;
+}
+
+@media(max-width:1200px){
+    .me-track{
+        grid-template-columns:repeat(3,1fr);
+    }
+}
+
+@media(max-width:700px){
+    .me-track{
+        grid-template-columns:1fr;
+    }
+}
+/*=========================================
+      FUTURE EVIDENCE PLEDGE
+=========================================*/
+
+.pledge-section{
+
+    background:#faf9f4;
+    padding:40px 10px;
+
+}
+
+.pledge-container{
+
+    max-width:1200px;
+    margin:auto;
+    text-align:center;
+
+}
+
+.pledge-label{
+
+    color:#008c5b;
+    font-size:.82rem;
+    font-weight:700;
+    letter-spacing:.28em;
+    text-transform:uppercase;
+    margin-bottom:18px;
+
+}
+
+.pledge-heading{
+
+    font-family:var(--display);
+    font-size:clamp(2.5rem,4vw,4.2rem);
+    color:#014546;
+    font-weight:500;
+    line-height:1.1;
+    margin-bottom:18px;
+
+}
+
+.pledge-heading em{
+
+    color:#e0ad68;
+    font-style:italic;
+
+}
+
+.pledge-subtitle{
+
+    max-width:760px;
+    margin:0 auto 60px;
+    color:#5f5f5f;
+    line-height:1.8;
+    font-size:1rem;
+
+}
+
+/*=========================================
+            GRID
+=========================================*/
+
+.pledge-grid{
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:28px;
+    margin-bottom:20px;
+
+}
+
+/*=========================================
+            CARD
+=========================================*/
+
+.pledge-card{
+
+    background:#fff;
+    border-radius:24px;
+    padding:40px 30px;
+
+    border:1px solid #e5e5e5;
+
+    transition:.35s;
+
+    box-shadow:0 10px 35px rgba(0,0,0,.06);
+
+}
+
+.pledge-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#008c5b;
+
+    box-shadow:0 25px 55px rgba(0,140,91,.12);
+
+}
+
+.pledge-icon{
+
+    width:70px;
+    height:70px;
+
+    margin:auto auto 22px;
+
+    border-radius:50%;
+
+    background:rgba(0,140,91,.08);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:2rem;
+
+}
+
+.pledge-card h3{
+
+    font-family:var(--display);
+
+    color:#014546;
+
+    font-size:1.6rem;
+
+    margin-bottom:15px;
+
+}
+
+.pledge-card p{
+
+    color:#666;
+
+    line-height:1.8;
+
+    font-size:.96rem;
+
+    margin-bottom:25px;
+
+}
+
+.pledge-status{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    background:#e8f7ef;
+
+    color:#008c5b;
+
+    border-radius:999px;
+
+    font-size:.8rem;
+
+    font-weight:700;
+
+}
+
+/*=========================================
+            BUTTONS
+=========================================*/
+
+.pledge-buttons{
+
+    display:flex;
+    justify-content:center;
+    gap:18px;
+    flex-wrap:wrap;
+
+}
+
+.pledge-btn{
+
+    padding:14px 28px;
+
+    border-radius:999px;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.pledge-btn.outline{
+
+    border:2px solid #008c5b;
+
+    color:#008c5b;
+
+    background:#fff;
+
+}
+
+.pledge-btn.outline:hover{
+
+    background:#008c5b;
+
+    color:#fff;
+
+}
+
+.pledge-btn.filled{
+
+    background:#008c5b;
+
+    color:#fff;
+
+}
+
+.pledge-btn.filled:hover{
+
+    background:#014546;
+
+}
+
+/*=========================================
+            RESPONSIVE
+=========================================*/
+
+@media(max-width:992px){
+
+    .pledge-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
 </style>
 </head>
 <body>
@@ -525,6 +868,169 @@ img{display:block;width:100%;height:100%;object-fit:cover}
   </div>
 </section>
 
+<section class="me-section" aria-labelledby="me-title">
+  <div class="me-container">
+
+    <p class="me-label">How We Measure</p>
+
+    <h2 class="me-title" id="me-title">
+      Monitoring & Evaluation — <em>The Learning Path</em>
+    </h2>
+
+    <p class="me-subtitle">
+      M&E is not a compliance exercise. It is how we learn, improve and stay accountable.
+    </p>
+
+    <div class="me-track">
+
+      <div class="me-step">
+        <span>01</span>
+        <h3>Reach & Enrolment</h3>
+        <p>Students reached, teachers trained and schools active through verified attendance records.</p>
+        <strong>1,200+ students · 48+ teachers · 6 schools</strong>
+      </div>
+
+      <div class="me-step">
+        <span>02</span>
+        <h3>Teacher Knowledge</h3>
+        <p>Pre/post training assessment measuring nutrition knowledge and classroom confidence.</p>
+        <strong>94% reported increased confidence</strong>
+      </div>
+
+      <div class="me-step">
+        <span>03</span>
+        <h3>Student Knowledge</h3>
+        <p>Age-adapted quizzes for food groups, plant diversity and nutrition-health linkages.</p>
+        <strong>87% showing knowledge gain</strong>
+      </div>
+
+      <div class="me-step">
+        <span>04</span>
+        <h3>Lunch Box Observation</h3>
+        <p>Monthly non-judgemental observation of food groups in school meals.</p>
+        <strong>Active across all 6 schools</strong>
+      </div>
+
+      <div class="me-step">
+        <span>05</span>
+        <h3>Dietary Diversity</h3>
+        <p>Household dietary diversity protocol for annual student household tracking.</p>
+        <strong>In development · Year 3</strong>
+      </div>
+
+      <div class="me-step">
+        <span>06</span>
+        <h3>External Evaluation</h3>
+        <p>Independent evaluation by a research partner once enough longitudinal data exists.</p>
+        <strong>Planned · Year 4</strong>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= FUTURE EVIDENCE PLEDGE ================= -->
+
+<section class="pledge-section" id="future-evidence">
+
+    <div class="pledge-container">
+
+        <p class="pledge-label">
+            WHAT WE'RE BUILDING TOWARD
+        </p>
+
+        <h2 class="pledge-heading">
+            Our Evidence <em>Pledge</em>
+        </h2>
+
+        <p class="pledge-subtitle">
+            The monitoring and evaluation tools we don't yet have are not a weakness—
+            they're part of our roadmap. We're committed to continuously strengthening
+            our evidence base through research, partnerships, and rigorous learning.
+        </p>
+
+        <div class="pledge-grid">
+
+            <!-- Card 1 -->
+            <div class="pledge-card">
+
+                <div class="pledge-icon">
+                    📈
+                </div>
+
+                <h3>Longitudinal Cohort Study</h3>
+
+                <p>
+                    Tracking the same group of students over three years to understand
+                    sustained dietary behaviour change and long-term learning outcomes.
+                </p>
+
+                <span class="pledge-status">
+                    Planned • Year 3
+                </span>
+
+            </div>
+
+            <!-- Card 2 -->
+
+            <div class="pledge-card">
+
+                <div class="pledge-icon">
+                    🔬
+                </div>
+
+                <h3>Independent Evaluation</h3>
+
+                <p>
+                    An external research institution will independently validate our
+                    outcomes to ensure credibility, transparency, and accountability.
+                </p>
+
+                <span class="pledge-status">
+                    Planned • Year 4
+                </span>
+
+            </div>
+
+            <!-- Card 3 -->
+
+            <div class="pledge-card">
+
+                <div class="pledge-icon">
+                    🥗
+                </div>
+
+                <h3>Dietary Diversity Score</h3>
+
+                <p>
+                    Introducing validated 24-hour dietary recall methods to replace
+                    self-reported observations with internationally accepted measures.
+                </p>
+
+                <span class="pledge-status">
+                    In Development
+                </span>
+
+            </div>
+
+        </div>
+
+        <div class="pledge-buttons">
+
+            <a href="transparency.html" class="pledge-btn outline">
+                View Transparency
+            </a>
+
+            <a href="contact.html" class="pledge-btn filled">
+                Become a Research Partner
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
 
 <footer class="footer" role="contentinfo">
   <div class="footer__inner">
