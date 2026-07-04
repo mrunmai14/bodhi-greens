@@ -217,6 +217,27 @@ img{display:block;width:100%;height:100%;object-fit:cover}
 .j-title{font-family:var(--display);font-size:.975rem;font-weight:500;color:#fff;margin-bottom:.35rem;line-height:1.3}
 .j-desc{font-size:.78rem;color:rgba(255,255,255,.48);line-height:1.6}
 
+/* ===== Premium image + gallery enhancements ===== */
+.about-image,.gallery-item,.impact-image{position:relative;overflow:hidden;background:#e8e2d8}
+.about-image img,.gallery-item img,.impact-image img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .75s var(--ease), filter .75s var(--ease)}
+.about-image:hover img,.gallery-item:hover img,.impact-image:hover img{transform:scale(1.07);filter:saturate(1.08) contrast(1.04)}
+.about-image::after,.gallery-item::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(1,69,70,.45),transparent 58%);opacity:.78;pointer-events:none;transition:opacity .35s ease}
+.gallery-item:hover::after{opacity:.92}
+.image-credit{position:absolute;left:1rem;bottom:1rem;z-index:2;color:#fff;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:rgba(1,69,70,.58);backdrop-filter:blur(10px);padding:.45rem .7rem;border-radius:999px}
+.gallery-section{background:linear-gradient(180deg,#fff 0%,var(--cream) 100%);padding:6rem 2rem;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.gallery-head{max-width:760px;text-align:center;margin:0 auto 1rem}.gallery-head .label{justify-content:center}.gallery-head .label::before{display:none}.gallery-head p{color:var(--muted);font-size:1rem;line-height:1.8;margin-top:0rem;}.gallery-head h2{margin-top:0rem}
+.premium-gallery{max-width:var(--max-w);margin:0 auto;display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:210px;gap:1rem}
+.gallery-item{border-radius:24px;box-shadow:0 20px 55px rgba(1,69,70,.11);border:1px solid rgba(1,69,70,.08)}
+.gallery-item.large{grid-column:span 6;grid-row:span 2}.gallery-item.medium{grid-column:span 3;grid-row:span 2}.gallery-item.wide{grid-column:span 6}.gallery-item.small{grid-column:span 3}
+.gallery-caption{position:absolute;left:1.15rem;right:1.15rem;bottom:1rem;z-index:3;color:#fff;transform:translateY(8px);transition:.35s ease}.gallery-item:hover .gallery-caption{transform:translateY(0)}
+.gallery-caption b{display:block;font-family:var(--display);font-size:1.25rem;line-height:1.15;margin-bottom:.25rem}.gallery-caption span{display:block;font-size:.78rem;color:rgba(255,255,255,.82);line-height:1.5}
+.impact-image-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:1rem;margin-top:2.5rem}.impact-image{height:320px;border-radius:28px;box-shadow:0 18px 50px rgba(1,69,70,.11)}
+.video-section{padding:6rem 2rem;background:var(--bg)}.video-card{max-width:var(--max-w);margin:0 auto;display:grid;grid-template-columns:.85fr 1.15fr;gap:2rem;align-items:center;background:#fff;border:1px solid var(--line);border-radius:34px;padding:0rem;box-shadow:0 28px 80px rgba(1,69,70,.12)}
+.video-copy{padding:1rem}.video-copy p:not(.label){color:var(--muted);margin:1rem 0 1.5rem}.video-box{position:relative;aspect-ratio:16/9;border-radius:26px;overflow:hidden;background:var(--deep);box-shadow:0 22px 55px rgba(1,69,70,.18)}.video-box iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+@media(max-width:980px){.premium-gallery{grid-template-columns:repeat(6,1fr);grid-auto-rows:190px}.gallery-item.large,.gallery-item.wide{grid-column:span 6}.gallery-item.medium,.gallery-item.small{grid-column:span 3}.video-card{grid-template-columns:1fr}.impact-image-grid{grid-template-columns:1fr}}
+@media(max-width:600px){.premium-gallery{grid-template-columns:1fr;grid-auto-rows:260px}.gallery-item.large,.gallery-item.medium,.gallery-item.wide,.gallery-item.small{grid-column:1;grid-row:span 1}.gallery-section,.video-section{padding:4rem 1rem}.video-card{padding:1rem;border-radius:24px}.impact-image{height:240px}}
+
+
 </style>
 </head>
 <body>
@@ -416,6 +437,45 @@ img{display:block;width:100%;height:100%;object-fit:cover}
   <div style="max-width:760px;margin:0 auto;position:relative;z-index:1" class="rev">
     <blockquote style="font-family:var(--display);font-size:clamp(1.4rem,2.8vw,2.4rem);font-weight:400;font-style:italic;color:#fff;line-height:1.4;margin-bottom:1rem">"We are not designing a nutrition programme. We are designing a <span style="font-style:normal;color:var(--amber)">system</span> — where every child who learns to think about food becomes a thread in a larger web of change."</blockquote>
     <p style="font-size:.75rem;color:rgba(255,255,255,.3);letter-spacing:.1em;text-transform:uppercase">Bodhi Greens Foundation — Theory of Change, 2024</p>
+  </div>
+</section>
+
+<!-- PREMIUM IMAGE GALLERY -->
+<section class="gallery-section" aria-label="Bodhi Greens image gallery">
+  <div class="gallery-head rev">
+    <h2 class="h2">Stories of learning, nutrition and <em>community action.</em></h2>
+    <p>A curated visual section to make the About page feel more credible, warm and donor-friendly. Replace these royalty-free Unsplash images later with original Bodhi Greens field photographs.</p>
+  </div>
+  <div class="premium-gallery">
+    <figure class="gallery-item large rev">
+      <img src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?auto=format&fit=crop&w=1200&q=80" alt="Children receiving nutrition support" loading="lazy">
+      <figcaption class="gallery-caption"><b>Nutrition First</b><span>Healthy meals that help children learn better</span></figcaption>
+    </figure>
+    <figure class="gallery-item medium rev">
+      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80" alt="Green garden and natural landscape" loading="lazy">
+      <figcaption class="gallery-caption"><b>School Gardens</b><span>Learning sustainability through hands-on growing</span></figcaption>
+    </figure>
+    <figure class="gallery-item small rev">
+      <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=900&q=80" alt="Teacher and students in classroom" loading="lazy">
+      <figcaption class="gallery-caption"><b>Teacher Learning</b><span>Equipping educators with practical tools</span></figcaption>
+    </figure>
+    <figure class="gallery-item small rev">
+      <img src="https://images.unsplash.com/photo-1521791055366-0d553872125f?auto=format&fit=crop&w=900&q=80" alt="People collaborating as a team" loading="lazy">
+      <figcaption class="gallery-caption"><b>Community Action</b><span>Local participation that creates ownership</span></figcaption>
+    </figure>
+    <figure class="gallery-item wide rev">
+      <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1200&q=80" alt="Children in a community programme" loading="lazy">
+      <figcaption class="gallery-caption"><b>Field Programmes</b><span>Programmes designed around real community needs</span></figcaption>
+    </figure>
+    <figure class="gallery-item small rev">
+      <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=900&q=80" alt="Fresh vegetables and healthy food" loading="lazy">
+      <figcaption class="gallery-caption"><b>Food Literacy</b><span>Helping families build lifelong food awareness</span></figcaption>
+    </figure>
+    <figure class="gallery-item small rev">
+      <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=900&q=80" alt="People planning together" loading="lazy">
+      <figcaption class="gallery-caption"><b>Partnerships</b><span>CSR, schools and institutions working together</span></figcaption>
+    </figure>
+    
   </div>
 </section>
 
