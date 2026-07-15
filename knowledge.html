@@ -229,6 +229,441 @@ img{display:block;width:100%;height:100%;object-fit:cover}
 .ext-card-desc{font-size:.82rem;color:var(--ink-muted);line-height:1.6;margin-bottom:.75rem}
 .ext-card-link{font-size:.72rem;color:var(--ink-muted);display:flex;align-items:center;gap:.375rem}
 .ext-card-link svg{flex-shrink:0;opacity:.5}
+/* ===========================
+   NEWSLETTER STRIP
+=========================== */
+
+.newsletter-strip{
+    background:var(--green);          /* Green */
+    padding:30px 20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.newsletter-content{
+    width:100%;
+    max-width:760px;
+    text-align:center;
+}
+
+.newsletter-content h2{
+    font-family:var(--display);
+    font-size:60px;
+    font-weight:500;
+    color:#fff;
+    margin-bottom:28px;
+    line-height:1.1;
+}
+
+.newsletter-content p{
+    font-size:24px;
+    line-height:1.8;
+    color:rgba(255,255,255,.88);
+    max-width:900px;
+    margin:0 auto 55px;
+    font-weight:300;
+}
+
+.newsletter-form{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:18px;
+    flex-wrap:wrap;
+}
+
+.newsletter-form input{
+    width:420px;
+    max-width:100%;
+    height:64px;
+
+    padding:0 28px;
+
+    border:none;
+    outline:none;
+
+    background:rgba(255,255,255,.16);
+
+    border-radius:40px;
+
+    color:#fff;
+    font-size:18px;
+
+    transition:.3s;
+}
+
+.newsletter-form input::placeholder{
+    color:rgba(255,255,255,.72);
+}
+
+.newsletter-form input:focus{
+    background:rgba(255,255,255,.22);
+}
+
+.newsletter-form button{
+    height:64px;
+    padding:0 40px;
+
+    border:none;
+    border-radius:40px;
+
+    background:#fff;
+    color:#24984d;
+
+    font-size:18px;
+    font-weight:600;
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.newsletter-form button:hover{
+    background:#f3f3f3;
+    transform:translateY(-2px);
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width:768px){
+
+    .newsletter-strip{
+        padding:80px 25px;
+    }
+
+    .newsletter-content h2{
+        font-size:42px;
+    }
+
+    .newsletter-content p{
+        font-size:18px;
+        margin-bottom:40px;
+    }
+
+    .newsletter-form{
+        flex-direction:column;
+    }
+
+    .newsletter-form input,
+    .newsletter-form button{
+        width:100%;
+    }
+}
+/*========================
+      FAQ SECTION
+=========================*/
+
+.faq-section{
+    background:#f8f5ef;
+    padding:30px 20px;
+}
+
+.faq-container{
+    max-width:900px;
+    margin:auto;
+}
+
+.faq-label{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    color:#2fa95d;
+    font-size:14px;
+    letter-spacing:1px;
+    font-weight:700;
+    text-transform:uppercase;
+    margin-bottom:13px;
+}
+
+.faq-label span{
+    width:28px;
+    height:2px;
+    background:#2fa95d;
+}
+
+.faq-title{
+    font-family:Georgia, serif;
+    font-size:64px;
+    color:#23584d;
+    font-weight:500;
+    margin-bottom:20px;
+    line-height:1.15;
+}
+
+.faq-title em{
+    color:#35b25d;
+    font-style:italic;
+}
+
+.faq-list{
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+}
+
+.faq-item{
+    background:#fff;
+    border:1px solid #ddd3c4;
+    border-radius:20px;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.faq-question{
+    width:100%;
+    padding: 14px 15px;
+
+    border:none;
+    background:none;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    cursor:pointer;
+
+    font-size:14px;
+    font-weight:400;
+    color:#184d45;
+    text-align:left;
+}
+
+.icon{
+    font-size:34px;
+    color:#2fa95d;
+    transition:.3s;
+}
+
+.faq-answer{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height .4s ease;
+}
+
+.faq-answer p{
+    padding:0 30px 30px;
+    color:#666;
+    line-height:1.8;
+    font-size:12px;
+}
+
+.faq-item.active .faq-answer{
+    max-height:220px;
+}
+
+.faq-item.active .icon{
+    transform:rotate(45deg);
+}
+
+.faq-footer{
+    margin-top:20px;
+    color:#666;
+    font-size:17px;
+}
+
+.faq-footer a{
+    color:#2fa95d;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.faq-footer a:hover{
+    text-decoration:underline;
+}
+
+/*========================
+      MOBILE
+=========================*/
+
+@media(max-width:768px){
+
+    .faq-section{
+        padding:30px 20px;
+    }
+
+    .faq-title{
+        font-size:42px;
+    }
+
+    .faq-question{
+        font-size:12px;
+        padding:10px;
+    }
+
+    .faq-answer p{
+        font-size:10px;
+        padding:0 10px 10px;
+    }
+}
+/*=====================================
+        RELATED READING
+======================================*/
+
+.related-reading{
+    background:#f4f4ec;
+    padding:30px 0 50px;
+}
+
+.related-reading .container{
+    width:min(1180px,90%);
+    margin:auto;
+}
+
+.section-label{
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    color: #2fa95d;
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:2px;
+    text-transform:uppercase;
+
+    margin-bottom:15px;
+}
+
+.section-label span{
+    width:30px;
+    height:2px;
+    background:#53616b;
+}
+
+.reading-grid{
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:26px;
+
+}
+
+.reading-card{
+
+    background:#fff;
+
+    border:1px solid #d8d2c6;
+
+    border-radius:18px;
+
+    padding:17px 15px;
+
+    text-decoration:none;
+
+    transition:.35s ease;
+
+    min-height:120px;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.reading-card h3{
+
+    color: var(--green);
+
+    font-size:16px;
+
+    font-family:Georgia,serif;
+
+    font-weight:300;
+
+    line-height:1;
+
+    margin-bottom:10px;
+
+}
+
+.reading-card p{
+
+    color:#5b5b5b;
+
+    font-size:12px;
+
+    line-height:1.7;
+
+    margin-bottom:auto;
+
+}
+
+.arrow{
+
+    font-size:28px;
+
+    color:#2ba75a;
+
+    margin-top:10px;
+
+    transition:.3s;
+
+}
+
+.reading-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 18px 45px rgba(0,0,0,.08);
+
+    border-color:#2ba75a;
+
+}
+
+.reading-card:hover .arrow{
+
+    transform:translateX(8px);
+
+}
+
+/*=============================
+        RESPONSIVE
+==============================*/
+
+@media(max-width:992px){
+
+.reading-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.reading-card{
+
+min-height:auto;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.related-reading{
+
+padding:70px 0;
+
+}
+
+.reading-card{
+
+padding:28px;
+
+}
+
+.reading-card h3{
+
+font-size:28px;
+
+}
+
+.reading-card p{
+
+font-size:17px;
+
+}
+
+}
 </style>
 </head>
 <body>
@@ -450,7 +885,154 @@ img{display:block;width:100%;height:100%;object-fit:cover}
     <p class="rev d4" style="font-size:.78rem;color:var(--muted);margin-top:1.5rem">Licensed under Creative Commons CC BY-NC-SA 4.0 · Attribution required · Non-commercial use</p>
   </div>
 </section>
+<!-- Newsletter Strip -->
+ <section class="newsletter-strip">
+    <div class="newsletter-content">
 
+        <h2>Stay close to the work.</h2>
+
+        <p>
+            Programme updates, research notes, and perspectives from the field.
+            No filler. Sent when there is something worth saying.
+        </p>
+
+        <form class="newsletter-form">
+            <input
+                type="email"
+                placeholder="your@email.com"
+                required
+            >
+            <button type="submit">
+                Subscribe
+            </button>
+        </form>
+
+    </div>
+</section>
+<section class="faq-section">
+    <div class="faq-container">
+
+        <p class="faq-label">
+            <span></span> COMMON QUESTIONS
+        </p>
+
+        <h2 class="faq-title">
+            Frequently asked <em>questions.</em>
+        </h2>
+
+        <div class="faq-list">
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What resources does the Bodhi Greens Knowledge Hub offer?</span>
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>
+                        The Bodhi Greens Knowledge Hub offers free resources across seven domains: Teacher Academy (lesson plans, facilitation guides, observation tools), Nutrition Science (evidence-based research summaries), Food Systems (sustainable agriculture, seed sovereignty), Animal Welfare (compassion education), Research Library (M&E frameworks, evidence briefs), Compassion Education, and Downloads (free toolkits and cards).</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Are the Knowledge Hub resources free to download?</span>
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>
+                        Yes. All resources in the Bodhi Greens Knowledge Hub are freely available to download. This includes the Teacher's Guide to Whole Food Nutrition, Nutrition Cards, Lunch Box Observation Protocols, and M&E Framework documents.</p>
+                </div>
+            </div>
+
+           <div class="faq-item">
+                <button class="faq-question">
+                    <span>What is the Whole Food Nutrition Teacher's Guide?</span>
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>
+                        The Whole Food Nutrition Teacher's Guide is a comprehensive resource developed by Bodhi Greens Foundation for school teachers. It covers whole food nutrition science, classroom facilitation techniques, age-appropriate activities for different grade levels, and structured observation protocols. It was developed from the School Nutrition Initiative's first year of delivery. </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How can teachers use the Bodhi Greens resources?</span>
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>
+                        Teachers can use the Bodhi Greens Foundation resources to integrate nutrition education into their existing classroom curriculum. The Teacher Academy section provides session plans, facilitation guides, and an observation tool for tracking students' dietary diversity over time — all designed to be used without specialist nutrition training. </p>
+                </div>
+            </div>
+            
+
+
+        </div>
+
+        <p class="faq-footer">
+            Have a question not answered here?
+            <a href="contact.html">Contact us</a> and we'll respond within 5 working days.
+        </p>
+
+    </div>
+</section>
+<!-- =========================
+     RELATED READING
+========================== -->
+
+<section class="related-reading">
+
+    <div class="container">
+
+        <p class="section-label">
+            <span></span>
+            RELATED READING
+        </p>
+
+        <div class="reading-grid">
+
+            <a href="our-work.html" class="reading-card">
+
+                <h3>Our Work — School Nutrition Initiative</h3>
+
+                <p>
+                    How the programme uses these resources in school.
+                </p>
+
+                <span class="arrow">→</span>
+
+            </a>
+
+            <a href="impact.html" class="reading-card">
+
+                <h3>Impact & Evidence</h3>
+
+                <p>
+                    Programme outcomes and evidence base.
+                </p>
+
+                <span class="arrow">→</span>
+
+            </a>
+
+            <a href="knowledge.html" class="reading-card">
+
+                <h3>Contact - Research partnership</h3>
+
+                <p>
+                    Partner with us on research and knowledge development.
+                </p>
+
+                <span class="arrow">→</span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
 <footer class="footer">
   <div class="footer__inner">
     <div class="footer__top">
@@ -485,6 +1067,23 @@ document.querySelectorAll('.ftag').forEach(function(btn){
     document.querySelectorAll('.ftag').forEach(function(b){b.classList.remove('active');});
     btn.classList.add('active');
   });
+});
+const faqs = document.querySelectorAll(".faq-item");
+
+faqs.forEach(item => {
+
+    item.querySelector(".faq-question").addEventListener("click", () => {
+
+        faqs.forEach(faq => {
+            if(faq !== item){
+                faq.classList.remove("active");
+            }
+        });
+
+        item.classList.toggle("active");
+
+    });
+
 });
 </script>
 </body>

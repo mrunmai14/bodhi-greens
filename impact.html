@@ -665,6 +665,319 @@ img{display:block;width:100%;height:100%;object-fit:cover}
     }
 
 }
+/*========================
+      FAQ SECTION
+=========================*/
+
+.faq-section{
+    background:#f8f5ef;
+    padding:30px 20px;
+}
+
+.faq-container{
+    max-width:900px;
+    margin:auto;
+}
+
+.faq-label{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    color:#2fa95d;
+    font-size:14px;
+    letter-spacing:1px;
+    font-weight:700;
+    text-transform:uppercase;
+    margin-bottom:13px;
+}
+
+.faq-label span{
+    width:28px;
+    height:2px;
+    background:#2fa95d;
+}
+
+.faq-title{
+    font-family:Georgia, serif;
+    font-size:64px;
+    color:#23584d;
+    font-weight:500;
+    margin-bottom:20px;
+    line-height:1.15;
+}
+
+.faq-title em{
+    color:#35b25d;
+    font-style:italic;
+}
+
+.faq-list{
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+}
+
+.faq-item{
+    background:#fff;
+    border:1px solid #ddd3c4;
+    border-radius:20px;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.faq-question{
+    width:100%;
+    padding: 14px 15px;
+
+    border:none;
+    background:none;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    cursor:pointer;
+
+    font-size:14px;
+    font-weight:400;
+    color:#184d45;
+    text-align:left;
+}
+
+.icon{
+    font-size:34px;
+    color:#2fa95d;
+    transition:.3s;
+}
+
+.faq-answer{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height .4s ease;
+}
+
+.faq-answer p{
+    padding:0 30px 30px;
+    color:#666;
+    line-height:1.8;
+    font-size:12px;
+}
+
+.faq-item.active .faq-answer{
+    max-height:220px;
+}
+
+.faq-item.active .icon{
+    transform:rotate(45deg);
+}
+
+.faq-footer{
+    margin-top:20px;
+    color:#666;
+    font-size:17px;
+}
+
+.faq-footer a{
+    color:#2fa95d;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.faq-footer a:hover{
+    text-decoration:underline;
+}
+
+/*========================
+      MOBILE
+=========================*/
+
+@media(max-width:768px){
+
+    .faq-section{
+        padding:30px 20px;
+    }
+
+    .faq-title{
+        font-size:42px;
+    }
+
+    .faq-question{
+        font-size:12px;
+        padding:10px;
+    }
+
+    .faq-answer p{
+        font-size:10px;
+        padding:0 10px 10px;
+    }
+}
+/*=====================================
+        RELATED READING
+======================================*/
+
+.related-reading{
+    background:#f4f4ec;
+    padding:30px 0 50px;
+}
+
+.related-reading .container{
+    width:min(1180px,90%);
+    margin:auto;
+}
+
+.section-label{
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    color: #2fa95d;
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:2px;
+    text-transform:uppercase;
+
+    margin-bottom:15px;
+}
+
+.section-label span{
+    width:30px;
+    height:2px;
+    background:#53616b;
+}
+
+.reading-grid{
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:26px;
+
+}
+
+.reading-card{
+
+    background:#fff;
+
+    border:1px solid #d8d2c6;
+
+    border-radius:18px;
+
+    padding:17px 15px;
+
+    text-decoration:none;
+
+    transition:.35s ease;
+
+    min-height:120px;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.reading-card h3{
+
+    color: var(--green);
+
+    font-size:16px;
+
+    font-family:Georgia,serif;
+
+    font-weight:300;
+
+    line-height:1;
+
+    margin-bottom:10px;
+
+}
+
+.reading-card p{
+
+    color:#5b5b5b;
+
+    font-size:12px;
+
+    line-height:1.7;
+
+    margin-bottom:auto;
+
+}
+
+.arrow{
+
+    font-size:28px;
+
+    color:#2ba75a;
+
+    margin-top:10px;
+
+    transition:.3s;
+
+}
+
+.reading-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 18px 45px rgba(0,0,0,.08);
+
+    border-color:#2ba75a;
+
+}
+
+.reading-card:hover .arrow{
+
+    transform:translateX(8px);
+
+}
+
+/*=============================
+        RESPONSIVE
+==============================*/
+
+@media(max-width:992px){
+
+.reading-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.reading-card{
+
+min-height:auto;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.related-reading{
+
+padding:70px 0;
+
+}
+
+.reading-card{
+
+padding:28px;
+
+}
+
+.reading-card h3{
+
+font-size:28px;
+
+}
+
+.reading-card p{
+
+font-size:17px;
+
+}
+
+}
 </style>
 </head>
 <body>
@@ -1031,7 +1344,139 @@ img{display:block;width:100%;height:100%;object-fit:cover}
     </div>
 
 </section>
+<section class="faq-section">
+    <div class="faq-container">
 
+        <p class="faq-label">
+            <span></span> COMMON QUESTIONS
+        </p>
+
+        <h2 class="faq-title">
+            Frequently asked <em>questions.</em>
+        </h2>
+
+        <div class="faq-list">
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What percentage of Indian children are affected by undernutrition?</span>
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>
+                        According to NFHS-5 (2019-21), 35.5% of Indian children under 5 are stunted due to chronic undernutrition. Additionally, 67% of childhood anaemia in India is linked to inadequate dietary diversity (UNICEF, 2022 ↗). These statistics highlight a systemic nutrition crisis that extends beyond food availability to food knowledge and behaviour.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What is a Theory of Change in nutrition education?</span>
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>
+                        A Theory of Change in nutrition education maps how a programme's inputs and activities produce outputs that lead to short-term, medium-term, and long-term outcomes. Bodhi Greens Foundation's Theory of Change begins with trained teachers (input), delivers nutrition sessions (activity), produces knowledge change in students (output), and aims to shift community food systems over 10–20 years (long-term impact).</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What is M&E in a nonprofit nutrition programme?</span>
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>
+                        M&E — Monitoring and Evaluation — is a systematic process for tracking whether a programme is working as intended. For Bodhi Greens Foundation, M&E includes tracking student enrolment, measuring teacher confidence before and after training, conducting pre/post knowledge assessments with students, observing school lunch boxes monthly, and planning independent external evaluation for Year 4.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How does child nutrition education affect families?</span>
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>
+                       Research and field evidence suggest that when children receive nutrition education at school, they bring new knowledge home — initiating household conversations about food that influence parental purchasing and cooking decisions. Bodhi Greens Foundation reports that 78% of parents surveyed noted positive dietary behaviour changes in the household following their child's participation in the programme (self-reported). </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Are Bodhi Greens Foundation's impact numbers independently verified?</span>
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>
+                       Bodhi Greens Foundation is transparent that its current impact figures are self-reported post-programme assessments, not independently validated. Teacher confidence (94%) and student knowledge improvement (87%) were measured through assessments administered by programme staff. Independent external evaluation is planned for Year 4 of the programme.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <p class="faq-footer">
+            Have a question not answered here?
+            <a href="contact.html">Contact us</a> and we'll respond within 5 working days.
+        </p>
+
+    </div>
+</section>
+<!-- =========================
+     RELATED READING
+========================== -->
+
+<section class="related-reading">
+
+    <div class="container">
+
+        <p class="section-label">
+            <span></span>
+            RELATED READING
+        </p>
+
+        <div class="reading-grid">
+
+            <a href="our-work.html" class="reading-card">
+
+                <h3>Our Work — How we work</h3>
+
+                <p>
+                    The programme logic and design behind these results.
+                </p>
+
+                <span class="arrow">→</span>
+
+            </a>
+
+            <a href="knowledge.html" class="reading-card">
+
+                <h3>Knowledge Hub - Research Library</h3>
+
+                <p>
+                    Research and evidence resources for researchers.
+                </p>
+
+                <span class="arrow">→</span>
+
+            </a>
+
+            <a href="transparency.html" class="reading-card">
+
+                <h3>Transparency</h3>
+
+                <p>
+                    Financial transparency and accountability documents.
+                </p>
+
+                <span class="arrow">→</span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
 <footer class="footer" role="contentinfo">
   <div class="footer__inner">
     <div class="footer__top">
@@ -1186,7 +1631,23 @@ riverButtons.forEach(button => {
       .join("");
   });
 });
+const faqs = document.querySelectorAll(".faq-item");
 
+faqs.forEach(item => {
+
+    item.querySelector(".faq-question").addEventListener("click", () => {
+
+        faqs.forEach(faq => {
+            if(faq !== item){
+                faq.classList.remove("active");
+            }
+        });
+
+        item.classList.toggle("active");
+
+    });
+
+});
 </script>
 </body>
 </html>

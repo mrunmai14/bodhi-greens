@@ -183,6 +183,462 @@ img{display:block;width:100%;height:100%;object-fit:cover}
 .partner-card-desc{font-size:.83rem;color:var(--muted);line-height:1.65;margin-bottom:1rem}
 .partner-card-amount{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--green)}
 @media(max-width:900px){.contact-grid{grid-template-columns:1fr}.partner-cards{grid-template-columns:1fr}}
+/* ===========================
+   NEWSLETTER STRIP
+=========================== */
+
+.newsletter-strip{
+    background:var(--green);          /* Green */
+    padding:30px 20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.newsletter-content{
+    width:100%;
+    max-width:760px;
+    text-align:center;
+}
+
+.newsletter-content h2{
+    font-family:var(--display);
+    font-size:60px;
+    font-weight:500;
+    color:#fff;
+    margin-bottom:28px;
+    line-height:1.1;
+}
+
+.newsletter-content p{
+    font-size:24px;
+    line-height:1.8;
+    color:rgba(255,255,255,.88);
+    max-width:900px;
+    margin:0 auto 55px;
+    font-weight:300;
+}
+
+.newsletter-form{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:18px;
+    flex-wrap:wrap;
+}
+
+.newsletter-form input{
+    width:420px;
+    max-width:100%;
+    height:64px;
+
+    padding:0 28px;
+
+    border:none;
+    outline:none;
+
+    background:rgba(255,255,255,.16);
+
+    border-radius:40px;
+
+    color:#fff;
+    font-size:18px;
+
+    transition:.3s;
+}
+
+.newsletter-form input::placeholder{
+    color:rgba(255,255,255,.72);
+}
+
+.newsletter-form input:focus{
+    background:rgba(255,255,255,.22);
+}
+
+.newsletter-form button{
+    height:64px;
+    padding:0 40px;
+
+    border:none;
+    border-radius:40px;
+
+    background:#fff;
+    color:#24984d;
+
+    font-size:18px;
+    font-weight:600;
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.newsletter-form button:hover{
+    background:#f3f3f3;
+    transform:translateY(-2px);
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width:768px){
+
+    .newsletter-strip{
+        padding:80px 25px;
+    }
+
+    .newsletter-content h2{
+        font-size:42px;
+    }
+
+    .newsletter-content p{
+        font-size:18px;
+        margin-bottom:40px;
+    }
+
+    .newsletter-form{
+        flex-direction:column;
+    }
+
+    .newsletter-form input,
+    .newsletter-form button{
+        width:100%;
+    }
+}
+
+/*========================
+      FAQ SECTION
+=========================*/
+
+.faq-section{
+    background:#f8f5ef;
+    padding:30px 20px;
+}
+
+.faq-container{
+    max-width:900px;
+    margin:auto;
+}
+
+.faq-label{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    color:#2fa95d;
+    font-size:14px;
+    letter-spacing:1px;
+    font-weight:700;
+    text-transform:uppercase;
+    margin-bottom:13px;
+}
+
+.faq-label span{
+    width:28px;
+    height:2px;
+    background:#2fa95d;
+}
+
+.faq-title{
+    font-family:Georgia, serif;
+    font-size:64px;
+    color:#23584d;
+    font-weight:500;
+    margin-bottom:20px;
+    line-height:1.15;
+}
+
+.faq-title em{
+    color:#35b25d;
+    font-style:italic;
+}
+
+.faq-list{
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+}
+
+.faq-item{
+    background:#fff;
+    border:1px solid #ddd3c4;
+    border-radius:20px;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.faq-question{
+    width:100%;
+    padding: 14px 15px;
+
+    border:none;
+    background:none;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    cursor:pointer;
+
+    font-size:14px;
+    font-weight:400;
+    color:#184d45;
+    text-align:left;
+}
+
+.icon{
+    font-size:34px;
+    color:#2fa95d;
+    transition:.3s;
+}
+
+.faq-answer{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height .4s ease;
+}
+
+.faq-answer p{
+    padding:0 30px 30px;
+    color:#666;
+    line-height:1.8;
+    font-size:12px;
+}
+
+.faq-item.active .faq-answer{
+    max-height:220px;
+}
+
+.faq-item.active .icon{
+    transform:rotate(45deg);
+}
+
+.faq-footer{
+    margin-top:20px;
+    color:#666;
+    font-size:17px;
+}
+
+.faq-footer a{
+    color:#2fa95d;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.faq-footer a:hover{
+    text-decoration:underline;
+}
+
+/*========================
+      MOBILE
+=========================*/
+
+@media(max-width:768px){
+
+    .faq-section{
+        padding:30px 20px;
+    }
+
+    .faq-title{
+        font-size:42px;
+    }
+
+    .faq-question{
+        font-size:12px;
+        padding:10px;
+    }
+
+    .faq-answer p{
+        font-size:10px;
+        padding:0 10px 10px;
+    }
+}
+/*=====================================
+        RELATED READING
+======================================*/
+
+.related-reading{
+    background:#f4f4ec;
+    padding:30px 0 50px;
+}
+
+.related-reading .container{
+    width:min(1180px,90%);
+    margin:auto;
+}
+
+.section-label{
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    color: #2fa95d;
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:2px;
+    text-transform:uppercase;
+
+    margin-bottom:15px;
+}
+
+.section-label span{
+    width:30px;
+    height:2px;
+    background:#53616b;
+}
+
+.reading-grid{
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:26px;
+
+}
+
+.reading-card{
+
+    background:#fff;
+
+    border:1px solid #d8d2c6;
+
+    border-radius:18px;
+
+    padding:17px 15px;
+
+    text-decoration:none;
+
+    transition:.35s ease;
+
+    min-height:120px;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.reading-card h3{
+
+    color: var(--green);
+
+    font-size:16px;
+
+    font-family:Georgia,serif;
+
+    font-weight:300;
+
+    line-height:1;
+
+    margin-bottom:10px;
+
+}
+
+.reading-card p{
+
+    color:#5b5b5b;
+
+    font-size:12px;
+
+    line-height:1.7;
+
+    margin-bottom:auto;
+
+}
+
+.arrow{
+
+    font-size:28px;
+
+    color:#2ba75a;
+
+    margin-top:10px;
+
+    transition:.3s;
+
+}
+
+.reading-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 18px 45px rgba(0,0,0,.08);
+
+    border-color:#2ba75a;
+
+}
+
+.reading-card:hover .arrow{
+
+    transform:translateX(8px);
+
+}
+
+/*=============================
+        RESPONSIVE
+==============================*/
+
+@media(max-width:992px){
+
+.reading-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.reading-card{
+
+min-height:auto;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.related-reading{
+
+padding:70px 0;
+
+}
+
+.reading-card{
+
+padding:28px;
+
+}
+
+.reading-card h3{
+
+font-size:28px;
+
+}
+
+.reading-card p{
+
+font-size:17px;
+
+}
+
+}
+
+/* ═══ INDIA LOCATION MAP ═══ */
+.location-section{padding:2rem 1rem;background:var(--cream);overflow:hidden}
+.location-inner{max-width:var(--max-w);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center}
+
+.location-map-wrap{position:relative}
+/* India map SVG styles */
+.india-map-path{fill:rgba(26,74,64,.1);stroke:rgba(26,74,64,.3);stroke-width:0.8;transition:fill var(--dur)}
+.active-state{fill:rgba(46,158,92,.25);stroke:rgba(46,158,92,.6);stroke-width:1.2}
+.map-pin{cursor:pointer}
+.map-pin:hover .pin-circle{fill:var(--green-mid)}
+.pin-circle{fill:var(--green-light);transition:fill var(--dur)}
+.pin-pulse{fill:none;stroke:rgba(75,191,122,.4);stroke-width:1}
+.location-info{margin-top:1rem}
+.location-item{display:flex;align-items:flex-start;gap:.875rem;padding:1rem 0;border-bottom:1px solid var(--line)}
+.location-item:last-child{border-bottom:none}
+.location-dot{width:10px;height:10px;border-radius:50%;background:var(--green-mid);flex-shrink:0;margin-top:4px}
+.location-text-title{font-weight:600;color:var(--green-deep);font-size:.875rem;margin-bottom:.2rem}
+.location-text-desc{font-size:.8rem;color:var(--ink-muted);line-height:1.55}
+
 </style>
 </head>
 <body>
@@ -339,6 +795,239 @@ img{display:block;width:100%;height:100%;object-fit:cover}
     <div style="display:flex;align-items:center;gap:.5rem;font-size:.78rem;color:var(--muted)"><span style="color:var(--green);font-weight:700">✓</span> Annual Audit Published</div>
     <div style="display:flex;align-items:center;gap:.5rem;font-size:.78rem;color:var(--muted)"><span style="color:var(--green);font-weight:700">✓</span> Societies Act, 1860</div>
   </div>
+</section>
+
+<!-- ═══ LOCATION + INDIA MAP ═══ -->
+<section class="location-section" aria-labelledby="location-h">
+  <div class="location-inner">
+    <div class="location-content rev-l">
+      <p class="label">Where we work</p>
+      <h2 class="h2" id="location-h" style="margin-bottom:1rem">Operating in <em>India.</em><br>Thinking globally.</h2>
+      <p style="font-size:.95rem;color:var(--ink-muted);line-height:1.78;margin-bottom:1.75rem">Our School Nutrition Initiative is currently active across Maharashtra, Delhi, and Karnataka. We are India-based, India-rooted, and building for India's food future — while drawing on and contributing to global nutrition and food systems knowledge.</p>
+      <div class="location-info">
+        <div class="location-item">
+          <div class="location-dot"></div>
+          <div>
+            <div class="location-text-title">Maharashtra</div>
+            <div class="location-text-desc">Active programme · Multiple schools · Teacher training hub</div>
+          </div>
+        </div>
+        <div class="location-item">
+          <div class="location-dot" style="background:rgba(46,158,92,.5)"></div>
+          <div>
+            <div class="location-text-title">Delhi</div>
+            <div class="location-text-desc">Active programme · Urban school nutrition context</div>
+          </div>
+        </div>
+        <div class="location-item">
+          <div class="location-dot" style="background:rgba(46,158,92,.4)"></div>
+          <div>
+            <div class="location-text-title">Karnataka</div>
+            <div class="location-text-desc">Active programme · Southern India pilot cohort</div>
+          </div>
+        </div>
+        <div class="location-item">
+          <div class="location-dot" style="background:rgba(139,105,20,.5)"></div>
+          <div>
+            <div class="location-text-title">Himalayan Region</div>
+            <div class="location-text-desc">Emerging — Himalayan Food Futures Lab (in development)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- India map SVG -->
+    <div class="location-map-wrap rev-r">
+      <svg viewBox="0 0 380 460" style="width:100%;max-width:440px;height:auto" role="img" aria-label="Map of India showing active programme locations in Maharashtra, Delhi, and Karnataka">
+        <title>India Map — Bodhi Greens Programme Locations</title>
+        <!-- Simplified India shape -->
+        <path d="M190 18 L225 22 L265 32 L295 48 L318 68 L330 92 L335 118 L332 142 L350 158 L365 182 L370 210 L362 236 L348 256 L336 282 L324 312 L310 340 L292 362 L272 382 L252 400 L233 418 L215 432 L200 442 L185 432 L167 418 L148 400 L128 382 L108 362 L90 340 L76 312 L64 282 L52 256 L38 236 L30 210 L35 182 L50 158 L68 142 L65 118 L70 92 L82 68 L105 48 L135 32 L175 22 Z" fill="rgba(26,74,64,.08)" stroke="rgba(26,74,64,.25)" stroke-width="1.5"/>
+        <!-- Kashmir/north indicator -->
+        <path d="M175 22 L190 18 L205 20 L220 22 L210 14 L195 10 L180 13 Z" fill="rgba(26,74,64,.06)" stroke="rgba(26,74,64,.2)" stroke-width="1"/>
+        <!-- Maharashtra active zone -->
+        <ellipse cx="155" cy="255" rx="32" ry="22" fill="rgba(46,158,92,.2)" stroke="rgba(46,158,92,.5)" stroke-width="1.5"/>
+        <circle cx="155" cy="255" r="6" fill="var(--green-mid)">
+          <animate attributeName="r" values="6;11;6" dur="3s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values=".8;.2;.8" dur="3s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="155" cy="255" r="4" fill="var(--green-mid)"/>
+        <text x="155" y="285" font-family="Inter,sans-serif" font-size="10" fill="rgba(26,74,64,.65)" text-anchor="middle" font-weight="600">Maharashtra</text>
+        <!-- Delhi active zone -->
+        <ellipse cx="195" cy="108" rx="22" ry="16" fill="rgba(46,158,92,.18)" stroke="rgba(46,158,92,.45)" stroke-width="1.5"/>
+        <circle cx="195" cy="108" r="5" fill="var(--green-mid)">
+          <animate attributeName="r" values="5;10;5" dur="3.5s" begin="1s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values=".8;.2;.8" dur="3.5s" begin="1s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="195" cy="108" r="3.5" fill="var(--green-mid)"/>
+        <text x="195" y="95" font-family="Inter,sans-serif" font-size="10" fill="rgba(26,74,64,.65)" text-anchor="middle" font-weight="600">Delhi</text>
+        <!-- Karnataka active zone -->
+        <ellipse cx="175" cy="330" rx="26" ry="18" fill="rgba(46,158,92,.15)" stroke="rgba(46,158,92,.4)" stroke-width="1.5"/>
+        <circle cx="175" cy="330" r="5" fill="var(--green-mid)">
+          <animate attributeName="r" values="5;9;5" dur="4s" begin=".5s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values=".8;.2;.8" dur="4s" begin=".5s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="175" cy="330" r="3.5" fill="var(--green-mid)"/>
+        <text x="175" y="356" font-family="Inter,sans-serif" font-size="10" fill="rgba(26,74,64,.65)" text-anchor="middle" font-weight="600">Karnataka</text>
+        <!-- Himalayan emerging zone -->
+        <ellipse cx="220" cy="38" rx="28" ry="14" fill="rgba(139,105,20,.12)" stroke="rgba(139,105,20,.4)" stroke-width="1" stroke-dasharray="4 3"/>
+        <circle cx="220" cy="38" r="4" fill="var(--earth)" opacity=".7"/>
+        <text x="270" y="42" font-family="Inter,sans-serif" font-size="9" fill="rgba(139,105,20,.7)" text-anchor="start">Himalayan Lab ↗</text>
+        <!-- Legend -->
+        <g>
+          <circle cx="30" cy="400" r="5" fill="var(--green-mid)"/>
+          <text x="42" y="404" font-family="Inter,sans-serif" font-size="9" fill="rgba(26,74,64,.65)">Active programme</text>
+          <circle cx="30" cy="418" r="4" fill="var(--earth)" opacity=".7"/>
+          <text x="42" y="422" font-family="Inter,sans-serif" font-size="9" fill="rgba(26,74,64,.55)">Emerging initiative</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+<!-- Newsletter Strip -->
+ <section class="newsletter-strip">
+    <div class="newsletter-content">
+
+        <h2>Stay close to the work.</h2>
+
+        <p>
+            Programme updates, research notes, and perspectives from the field.
+            No filler. Sent when there is something worth saying.
+        </p>
+
+        <form class="newsletter-form">
+            <input
+                type="email"
+                placeholder="your@email.com"
+                required
+            >
+            <button type="submit">
+                Subscribe
+            </button>
+        </form>
+
+    </div>
+</section>
+
+<section class="faq-section">
+    <div class="faq-container">
+
+        <p class="faq-label">
+            <span></span> COMMON QUESTIONS
+        </p>
+
+        <h2 class="faq-title">
+            Frequently asked <em>questions.</em>
+        </h2>
+
+        <div class="faq-list">
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How can a company partner with Bodhi Greens Foundation for CSR?</span>
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>
+                        Companies can partner with Bodhi Greens Foundation to fund or co-design school nutrition programmes under their CSR mandate. The foundation is 80G registered (donors receive tax deductions) and CSR eligible under Schedule VII. To initiate a partnership, use the CSR Partnership path on the contact form — the team responds within 3–5 working days.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How long does Bodhi Greens Foundation take to respond to enquiries?</span>
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>
+                        Bodhi Greens Foundation aims to respond to all genuine enquiries within 3-5 working days. Every message is read by a person, not an automated system. For urgent enquiries, please indicate this in your message. </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Can researchers collaborate with Bodhi Greens Foundation?</span>
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>
+                       Yes. Bodhi Greens Foundation welcomes research collaboration in areas including child nutrition, food systems, M&E methodology, and compassion education. The foundation is building towards an independent external evaluation of its School Nutrition Initiative and is actively seeking research partners. Use the Research Collaboration path on the contact form. </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How can teachers or nutrition professionals volunteer with Bodhi Greens Foundation?</span>
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>
+                        Nutrition educators, teachers, researchers, and food systems professionals can apply to volunteer with Bodhi Greens Foundation. Volunteers contribute to programme delivery, content development, community sessions, and field facilitation. Use the Volunteer path on the contact form.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <p class="faq-footer">
+            Have a question not answered here?
+            <a href="contact.html">Contact us</a> and we'll respond within 5 working days.
+        </p>
+
+    </div>
+</section>
+<!-- =========================
+     RELATED READING
+========================== -->
+
+<section class="related-reading">
+
+    <div class="container">
+
+        <p class="section-label">
+            <span></span>
+            RELATED READING
+        </p>
+
+        <div class="reading-grid">
+
+            <a href="our-work.html" class="reading-card">
+
+                <h3>Transparency</h3>
+
+                <p>
+                    Registration, 80G certificates and financial documents.
+                </p>
+
+                <span class="arrow">→</span>
+
+            </a>
+
+            <a href="impact.html" class="reading-card">
+
+                <h3>Impact & Evidence</h3>
+
+                <p>
+                    Evidence of programme outcomes before you partner.
+                </p>
+
+                <span class="arrow">→</span>
+
+            </a>
+
+            <a href="knowledge.html" class="reading-card">
+
+                <h3>Our Work</h3>
+
+                <p>
+                    What the school nutrition initiative actually does.
+                </p>
+
+                <span class="arrow">→</span>
+
+            </a>
+
+        </div>
+
+    </div>
+
 </section>
 
 <footer class="footer">

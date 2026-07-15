@@ -236,7 +236,319 @@ img{display:block;width:100%;height:100%;object-fit:cover}
 .video-copy{padding:1rem}.video-copy p:not(.label){color:var(--muted);margin:1rem 0 1.5rem}.video-box{position:relative;aspect-ratio:16/9;border-radius:26px;overflow:hidden;background:var(--deep);box-shadow:0 22px 55px rgba(1,69,70,.18)}.video-box iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 @media(max-width:980px){.premium-gallery{grid-template-columns:repeat(6,1fr);grid-auto-rows:190px}.gallery-item.large,.gallery-item.wide{grid-column:span 6}.gallery-item.medium,.gallery-item.small{grid-column:span 3}.video-card{grid-template-columns:1fr}.impact-image-grid{grid-template-columns:1fr}}
 @media(max-width:600px){.premium-gallery{grid-template-columns:1fr;grid-auto-rows:260px}.gallery-item.large,.gallery-item.medium,.gallery-item.wide,.gallery-item.small{grid-column:1;grid-row:span 1}.gallery-section,.video-section{padding:4rem 1rem}.video-card{padding:1rem;border-radius:24px}.impact-image{height:240px}}
+/*=====================================
+        RELATED READING
+======================================*/
 
+.related-reading{
+    background:#f4f4ec;
+    padding:30px 0 50px;
+}
+
+.related-reading .container{
+    width:min(1180px,90%);
+    margin:auto;
+}
+
+.section-label{
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    color: #2fa95d;
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:2px;
+    text-transform:uppercase;
+
+    margin-bottom:15px;
+}
+
+.section-label span{
+    width:30px;
+    height:2px;
+    background:#53616b;
+}
+
+.reading-grid{
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:26px;
+
+}
+
+.reading-card{
+
+    background:#fff;
+
+    border:1px solid #d8d2c6;
+
+    border-radius:18px;
+
+    padding:17px 15px;
+
+    text-decoration:none;
+
+    transition:.35s ease;
+
+    min-height:120px;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.reading-card h3{
+
+    color: var(--green);
+
+    font-size:16px;
+
+    font-family:Georgia,serif;
+
+    font-weight:300;
+
+    line-height:1;
+
+    margin-bottom:10px;
+
+}
+
+.reading-card p{
+
+    color:#5b5b5b;
+
+    font-size:12px;
+
+    line-height:1.7;
+
+    margin-bottom:auto;
+
+}
+
+.arrow{
+
+    font-size:28px;
+
+    color:#2ba75a;
+
+    margin-top:10px;
+
+    transition:.3s;
+
+}
+
+.reading-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 18px 45px rgba(0,0,0,.08);
+
+    border-color:#2ba75a;
+
+}
+
+.reading-card:hover .arrow{
+
+    transform:translateX(8px);
+
+}
+
+/*=============================
+        RESPONSIVE
+==============================*/
+
+@media(max-width:992px){
+
+.reading-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.reading-card{
+
+min-height:auto;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.related-reading{
+
+padding:70px 0;
+
+}
+
+.reading-card{
+
+padding:28px;
+
+}
+
+.reading-card h3{
+
+font-size:28px;
+
+}
+
+.reading-card p{
+
+font-size:17px;
+
+}
+
+}
+/*========================
+      FAQ SECTION
+=========================*/
+
+.faq-section{
+    background:#f8f5ef;
+    padding:30px 20px;
+}
+
+.faq-container{
+    max-width:900px;
+    margin:auto;
+}
+
+.faq-label{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    color:#2fa95d;
+    font-size:14px;
+    letter-spacing:1px;
+    font-weight:700;
+    text-transform:uppercase;
+    margin-bottom:13px;
+}
+
+.faq-label span{
+    width:28px;
+    height:2px;
+    background:#2fa95d;
+}
+
+.faq-title{
+    font-family:Georgia, serif;
+    font-size:64px;
+    color:#23584d;
+    font-weight:500;
+    margin-bottom:20px;
+    line-height:1.15;
+}
+
+.faq-title em{
+    color:#35b25d;
+    font-style:italic;
+}
+
+.faq-list{
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+}
+
+.faq-item{
+    background:#fff;
+    border:1px solid #ddd3c4;
+    border-radius:20px;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.faq-question{
+    width:100%;
+    padding: 14px 15px;
+
+    border:none;
+    background:none;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    cursor:pointer;
+
+    font-size:14px;
+    font-weight:400;
+    color:#184d45;
+    text-align:left;
+}
+
+.icon{
+    font-size:34px;
+    color:#2fa95d;
+    transition:.3s;
+}
+
+.faq-answer{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height .4s ease;
+}
+
+.faq-answer p{
+    padding:0 30px 30px;
+    color:#666;
+    line-height:1.8;
+    font-size:12px;
+}
+
+.faq-item.active .faq-answer{
+    max-height:220px;
+}
+
+.faq-item.active .icon{
+    transform:rotate(45deg);
+}
+
+.faq-footer{
+    margin-top:20px;
+    color:#666;
+    font-size:17px;
+}
+
+.faq-footer a{
+    color:#2fa95d;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.faq-footer a:hover{
+    text-decoration:underline;
+}
+
+/*========================
+      MOBILE
+=========================*/
+
+@media(max-width:768px){
+
+    .faq-section{
+        padding:30px 20px;
+    }
+
+    .faq-title{
+        font-size:42px;
+    }
+
+    .faq-question{
+        font-size:12px;
+        padding:10px;
+    }
+
+    .faq-answer p{
+        font-size:10px;
+        padding:0 10px 10px;
+    }
+}
 
 </style>
 </head>
@@ -518,6 +830,136 @@ img{display:block;width:100%;height:100%;object-fit:cover}
     </div>
   </div>
 </section>
+<section class="faq-section">
+    <div class="faq-container">
+
+        <p class="faq-label">
+            <span></span> COMMON QUESTIONS
+        </p>
+
+        <h2 class="faq-title">
+            Frequently asked <em>questions.</em>
+        </h2>
+
+        <div class="faq-list">
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How does the School Nutrition Initiative work?</span>
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>
+                        The School Nutrition Initiative works in three layers simultaneously. Teachers receive structured training in whole food nutrition science and classroom facilitation. Children receive age-appropriate nutrition education sessions connecting food to health, culture, and compassion. Parents participate in community engagement sessions that extend learning to the home environment. This multi-stakeholder approach creates self-reinforcing change.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How many schools does the School Nutrition Initiative reach?</span>
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>
+                        The School Nutrition Initiative currently operates in 6 schools across 3 states in India, having reached 1,200+ students and trained 48+ teachers as of 2024-25. 100% of participating schools have requested programme continuation.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What is teacher capacity building in nutrition education?</span>
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>
+                        Teacher capacity building in nutrition education means training classroom teachers — not just nutritionists — to deliver evidence-based nutrition lessons to children. Bodhi Greens Foundation provides 48+ hours of structured training covering whole food nutrition science, behaviour change communication, and hands-on classroom facilitation. </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What are the outcomes of the School Nutrition Initiative?</span>
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>
+                        The School Nutrition Initiative reports that 94% of trained teachers showed increased confidence (self-assessed post-training), 87% of students demonstrated improved nutrition knowledge (pre/post assessment), and 78% of parents reported positive household food changes (self-reported survey). These figures are self-reported and not yet independently validated.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What is the Himalayan Food Futures Lab?</span>
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>
+                        The Himalayan Food Futures Lab is an emerging strategic initiative being developed by Bodhi Greens Foundation. It envisions a long-term innovation ecosystem connecting food systems, entrepreneurship, universities, policy, research, and mountain communities in the Himalayan region. It is currently in the conceptualisation phase — not yet operational.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <p class="faq-footer">
+            Have a question not answered here?
+            <a href="contact.html">Contact us</a> and we'll respond within 5 working days.
+        </p>
+
+    </div>
+</section>
+<section class="related-reading">
+
+    <div class="container">
+
+        <p class="section-label">
+            <span></span>
+            RELATED READING
+        </p>
+
+        <div class="reading-grid">
+
+            <a href="impact.html" class="reading-card">
+
+                <h3>Impact and Evidence</h3>
+
+                <p>
+                    The school nutrition initiative and emerging strategic pathways.
+                </p>
+
+                <span class="arrow">→</span>
+
+            </a>
+
+            <a href="knowledge.html" class="reading-card">
+
+                <h3>Knowledge Hub</h3>
+
+                <p>
+                    Free teacher resources and research from the programme.
+                </p>
+
+                <span class="arrow">→</span>
+
+            </a>
+
+            <a href="transparency.html" class="reading-card">
+
+                <h3>Transparency</h3>
+
+                <p>
+                    Programme financial allocation and governance.
+                </p>
+
+                <span class="arrow">→</span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
 
 <footer class="footer" role="contentinfo">
   <div class="footer__inner">
@@ -584,6 +1026,23 @@ img{display:block;width:100%;height:100%;object-fit:cover}
   document.querySelectorAll('.anim-bar').forEach(function(el){bo.observe(el);});
   if(window.matchMedia('(prefers-reduced-motion:reduce)').matches){document.querySelectorAll('.rev,.rev-l,.rev-r').forEach(function(el){el.classList.add('on');});}
 })();
+const faqs = document.querySelectorAll(".faq-item");
+
+faqs.forEach(item => {
+
+    item.querySelector(".faq-question").addEventListener("click", () => {
+
+        faqs.forEach(faq => {
+            if(faq !== item){
+                faq.classList.remove("active");
+            }
+        });
+
+        item.classList.toggle("active");
+
+    });
+
+});
 </script>
 </body>
 </html>

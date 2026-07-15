@@ -216,10 +216,10 @@ img{display:block;width:100%;height:100%;object-fit:cover}
 .res-desc{font-size:.82rem;color:rgba(255,255,255,.5);line-height:1.6}
 
 /* FUND STRIP */
-.fund-strip{background:linear-gradient(135deg,#014546 0%,#008c5b 100%);padding:5.5rem 2rem;position:relative;overflow:hidden;text-align:center}
+.fund-strip{background:linear-gradient(135deg,#014546 0%,#008c5b 100%);padding:3rem 1rem;position:relative;overflow:hidden;text-align:center}
 .fund-strip::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 65% 50%,rgba(224,173,104,.12) 0%,transparent 60%)}
 .fund-inner{max-width:780px;margin:0 auto;position:relative;z-index:1}
-.fund-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;margin:3rem 0;text-align:left}
+.fund-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;margin:2rem 0;text-align:left}
 .fund-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:1.625rem;transition:all var(--dur)}
 .fund-card:hover{background:rgba(255,255,255,.14);transform:translateY(-3px)}
 .fund-card__icon{font-size:1.6rem;margin-bottom:.75rem}
@@ -382,6 +382,442 @@ img{display:block;width:100%;height:100%;object-fit:cover}
     .pillars-grid{
         grid-template-columns:1fr;
     }
+  }
+/* ===========================
+   NEWSLETTER STRIP
+=========================== */
+
+.newsletter-strip{
+    background:var(--green);          /* Green */
+    padding:30px 20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.newsletter-content{
+    width:100%;
+    max-width:760px;
+    text-align:center;
+}
+
+.newsletter-content h2{
+    font-family:var(--display);
+    font-size:60px;
+    font-weight:500;
+    color:#fff;
+    margin-bottom:28px;
+    line-height:1.1;
+}
+
+.newsletter-content p{
+    font-size:24px;
+    line-height:1.8;
+    color:rgba(255,255,255,.88);
+    max-width:900px;
+    margin:0 auto 55px;
+    font-weight:300;
+}
+
+.newsletter-form{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:18px;
+    flex-wrap:wrap;
+}
+
+.newsletter-form input{
+    width:420px;
+    max-width:100%;
+    height:64px;
+
+    padding:0 28px;
+
+    border:none;
+    outline:none;
+
+    background:rgba(255,255,255,.16);
+
+    border-radius:40px;
+
+    color:#fff;
+    font-size:18px;
+
+    transition:.3s;
+}
+
+.newsletter-form input::placeholder{
+    color:rgba(255,255,255,.72);
+}
+
+.newsletter-form input:focus{
+    background:rgba(255,255,255,.22);
+}
+
+.newsletter-form button{
+    height:64px;
+    padding:0 40px;
+
+    border:none;
+    border-radius:40px;
+
+    background:#fff;
+    color:#24984d;
+
+    font-size:18px;
+    font-weight:600;
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.newsletter-form button:hover{
+    background:#f3f3f3;
+    transform:translateY(-2px);
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width:768px){
+
+    .newsletter-strip{
+        padding:80px 25px;
+    }
+
+    .newsletter-content h2{
+        font-size:42px;
+    }
+
+    .newsletter-content p{
+        font-size:18px;
+        margin-bottom:40px;
+    }
+
+    .newsletter-form{
+        flex-direction:column;
+    }
+
+    .newsletter-form input,
+    .newsletter-form button{
+        width:100%;
+    }
+}
+
+/*========================
+      FAQ SECTION
+=========================*/
+
+.faq-section{
+    background:#f8f5ef;
+    padding:30px 20px;
+}
+
+.faq-container{
+    max-width:900px;
+    margin:auto;
+}
+
+.faq-label{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    color:#2fa95d;
+    font-size:14px;
+    letter-spacing:1px;
+    font-weight:700;
+    text-transform:uppercase;
+    margin-bottom:13px;
+}
+
+.faq-label span{
+    width:28px;
+    height:2px;
+    background:#2fa95d;
+}
+
+.faq-title{
+    font-family:Georgia, serif;
+    font-size:64px;
+    color:#23584d;
+    font-weight:500;
+    margin-bottom:20px;
+    line-height:1.15;
+}
+
+.faq-title em{
+    color:#35b25d;
+    font-style:italic;
+}
+
+.faq-list{
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+}
+
+.faq-item{
+    background:#fff;
+    border:1px solid #ddd3c4;
+    border-radius:20px;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.faq-question{
+    width:100%;
+    padding: 14px 15px;
+
+    border:none;
+    background:none;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    cursor:pointer;
+
+    font-size:14px;
+    font-weight:400;
+    color:#184d45;
+    text-align:left;
+}
+
+.icon{
+    font-size:34px;
+    color:#2fa95d;
+    transition:.3s;
+}
+
+.faq-answer{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height .4s ease;
+}
+
+.faq-answer p{
+    padding:0 30px 30px;
+    color:#666;
+    line-height:1.8;
+    font-size:12px;
+}
+
+.faq-item.active .faq-answer{
+    max-height:220px;
+}
+
+.faq-item.active .icon{
+    transform:rotate(45deg);
+}
+
+.faq-footer{
+    margin-top:20px;
+    color:#666;
+    font-size:17px;
+}
+
+.faq-footer a{
+    color:#2fa95d;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.faq-footer a:hover{
+    text-decoration:underline;
+}
+
+/*========================
+      MOBILE
+=========================*/
+
+@media(max-width:768px){
+
+    .faq-section{
+        padding:30px 20px;
+    }
+
+    .faq-title{
+        font-size:42px;
+    }
+
+    .faq-question{
+        font-size:12px;
+        padding:10px;
+    }
+
+    .faq-answer p{
+        font-size:10px;
+        padding:0 10px 10px;
+    }
+}
+/*=====================================
+        RELATED READING
+======================================*/
+
+.related-reading{
+    background:#f4f4ec;
+    padding:30px 0 50px;
+}
+
+.related-reading .container{
+    width:min(1180px,90%);
+    margin:auto;
+}
+
+.section-label{
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    color: #2fa95d;
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:2px;
+    text-transform:uppercase;
+
+    margin-bottom:15px;
+}
+
+.section-label span{
+    width:30px;
+    height:2px;
+    background:#53616b;
+}
+
+.reading-grid{
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:26px;
+
+}
+
+.reading-card{
+
+    background:#fff;
+
+    border:1px solid #d8d2c6;
+
+    border-radius:18px;
+
+    padding:17px 15px;
+
+    text-decoration:none;
+
+    transition:.35s ease;
+
+    min-height:120px;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.reading-card h3{
+
+    color: var(--green);
+
+    font-size:16px;
+
+    font-family:Georgia,serif;
+
+    font-weight:300;
+
+    line-height:1;
+
+    margin-bottom:10px;
+
+}
+
+.reading-card p{
+
+    color:#5b5b5b;
+
+    font-size:12px;
+
+    line-height:1.7;
+
+    margin-bottom:auto;
+
+}
+
+.arrow{
+
+    font-size:28px;
+
+    color:#2ba75a;
+
+    margin-top:10px;
+
+    transition:.3s;
+
+}
+
+.reading-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 18px 45px rgba(0,0,0,.08);
+
+    border-color:#2ba75a;
+
+}
+
+.reading-card:hover .arrow{
+
+    transform:translateX(8px);
+
+}
+
+/*=============================
+        RESPONSIVE
+==============================*/
+
+@media(max-width:992px){
+
+.reading-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.reading-card{
+
+min-height:auto;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.related-reading{
+
+padding:70px 0;
+
+}
+
+.reading-card{
+
+padding:28px;
+
+}
+
+.reading-card h3{
+
+font-size:28px;
+
+}
+
+.reading-card p{
+
+font-size:17px;
+
+}
+
 }
 </style>
 </head>
@@ -817,7 +1253,160 @@ img{display:block;width:100%;height:100%;object-fit:cover}
     </div>
   </div>
 </section>
+<!-- Newsletter Strip -->
+ <section class="newsletter-strip">
+    <div class="newsletter-content">
 
+        <h2>Stay close to the work.</h2>
+
+        <p>
+            Programme updates, research notes, and perspectives from the field.
+            No filler. Sent when there is something worth saying.
+        </p>
+
+        <form class="newsletter-form">
+            <input
+                type="email"
+                placeholder="your@email.com"
+                required
+            >
+            <button type="submit">
+                Subscribe
+            </button>
+        </form>
+
+    </div>
+</section>
+
+<section class="faq-section">
+    <div class="faq-container">
+
+        <p class="faq-label">
+            <span></span> COMMON QUESTIONS
+        </p>
+
+        <h2 class="faq-title">
+            Frequently asked <em>questions.</em>
+        </h2>
+
+        <div class="faq-list">
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What does Bodhi Greens Foundation do?</span>
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>
+                        Bodhi Greens Foundation is an Indian nonprofit that builds compassionate food systems through child nutrition education in schools, teacher capacity building, and community engagement. Its flagship programme — the School Nutrition Initiative — trains teachers to deliver whole food nutrition education to children across India.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What is the School Nutrition Initiative?</span>
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>
+                        The School Nutrition Initiative is Bodhi Greens Foundation's flagship programme. It works simultaneously with teachers, students, and parents to embed nutrition literacy in schools. Teachers are trained in whole food nutrition science, then deliver structured sessions to children aged 6-14, with parent engagement sessions to extend learning to the home.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How can companies partner with Bodhi Greens Foundation?</span>
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>
+                        Companies can fund or co-design school nutrition programmes under their CSR mandate. Bodhi Greens Foundation is 80G registered (donors receive tax deductions) and CSR eligible under Schedule VII of the Companies Act 2013. Contact the foundation through the partner enquiry form on the website.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Is Bodhi Greens Foundation a registered NGO in India?</span>
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>
+                        Yes. Bodhi Greens Foundation is registered as a Society under the Societies Registration Act, 1860. It holds 12A registration under the Income Tax Act 1961, and is 80G certified — enabling donors to claim tax deductions on contributions.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <p class="faq-footer">
+            Have a question not answered here?
+            <a href="contact.html">Contact us</a> and we'll respond within 5 working days.
+        </p>
+
+    </div>
+</section>
+<!-- =========================
+     RELATED READING
+========================== -->
+
+<section class="related-reading">
+
+    <div class="container">
+
+        <p class="section-label">
+            <span></span>
+            RELATED READING
+        </p>
+
+        <div class="reading-grid">
+
+            <a href="our-work.html" class="reading-card">
+
+                <h3>Our Work — School Nutrition Initiative</h3>
+
+                <p>
+                    How the programme reaches teachers,
+                    children, and families.
+                </p>
+
+                <span class="arrow">→</span>
+
+            </a>
+
+            <a href="impact.html" class="reading-card">
+
+                <h3>Impact & Evidence</h3>
+
+                <p>
+                    Honest reporting of programme outcomes
+                    and our M&E framework.
+                </p>
+
+                <span class="arrow">→</span>
+
+            </a>
+
+            <a href="knowledge.html" class="reading-card">
+
+                <h3>Knowledge Hub</h3>
+
+                <p>
+                    Free resources for teachers,
+                    researchers, and communities.
+                </p>
+
+                <span class="arrow">→</span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
 <footer class="footer" role="contentinfo">
   <div class="footer__inner">
     <div class="footer__top">
@@ -910,6 +1499,23 @@ img{display:block;width:100%;height:100%;object-fit:cover}
     document.querySelectorAll('.rev,.rev-l,.rev-r').forEach(function(el){el.classList.add('on');});
   }
 })();
+const faqs = document.querySelectorAll(".faq-item");
+
+faqs.forEach(item => {
+
+    item.querySelector(".faq-question").addEventListener("click", () => {
+
+        faqs.forEach(faq => {
+            if(faq !== item){
+                faq.classList.remove("active");
+            }
+        });
+
+        item.classList.toggle("active");
+
+    });
+
+});
 </script>
 </body>
 </html>
