@@ -162,12 +162,7 @@ img{display:block;width:100%;height:100%;object-fit:cover}
 
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
 .contact-form-wrap{background:#fff;border:1px solid var(--line);border-radius:16px;padding:2.5rem}
-.form-group{margin-bottom:1.25rem}
-.form-label{display:block;font-size:.8rem;font-weight:600;color:var(--deep);margin-bottom:.5rem;letter-spacing:.02em}
-.form-input,.form-select,.form-textarea{width:100%;font-family:var(--sans);font-size:.9rem;padding:.75rem 1rem;border:1.5px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);outline:none;transition:border-color var(--dur),box-shadow var(--dur)}
-.form-input:focus,.form-select:focus,.form-textarea:focus{border-color:var(--green);box-shadow:0 0 0 3px rgba(0,140,91,.1)}
-.form-textarea{min-height:120px;resize:vertical}
-.form-select{appearance:none;cursor:pointer}
+
 .contact-info{display:flex;flex-direction:column;gap:1.5rem}
 .info-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:1.75rem;transition:all var(--dur)}
 .info-card:hover{transform:translateY(-2px);box-shadow:0 12px 36px rgba(1,69,70,.09)}
@@ -639,6 +634,69 @@ font-size:17px;
 .location-text-title{font-weight:600;color:var(--green-deep);font-size:.875rem;margin-bottom:.2rem}
 .location-text-desc{font-size:.8rem;color:var(--ink-muted);line-height:1.55}
 
+/* Active state dots on hero */
+.hero__active{position:absolute;right:2rem;bottom:3rem;z-index:2;display:flex;flex-direction:column;gap:.75rem}
+.hero__active-item{display:flex;align-items:center;gap:.625rem;font-size:.75rem;color:rgba(255,255,255,.5)}
+.hero__active-dot{width:7px;height:7px;border-radius:50%;background:var(--green);animation:activepulse 2s ease-in-out infinite;flex-shrink:0}
+@keyframes activepulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
+/* ═══ PATHS SELECTOR ═══ */
+.paths-section{padding:5rem 2rem;background:#fff}
+.paths-inner{max-width:var(--max-w);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+.paths-title-note{font-size:.875rem;color:var(--ink-muted);margin-bottom:2rem;line-height:1.65;max-width:420px}
+/* Path cards */
+.path-cards{display:flex;flex-direction:column;gap:.75rem}
+.path-card{border:1.5px solid var(--line);border-radius:22px;padding:1.5rem 1.75rem;background:#fff;cursor:pointer;transition:all var(--dur) var(--ease);display:flex;align-items:flex-start;gap:1.125rem;width:100%;text-align:left;position:relative;overflow:hidden}
+.path-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--green-mid);transform:scaleY(0);transform-origin:center;transition:transform .35s var(--ease)}
+.path-card:hover,.path-card.active{border-color:rgba(46,158,92,.4);background:rgba(46,158,92,.03)}
+.path-card.active{border-color:var(--green-mid);background:rgba(46,158,92,.04)}
+.path-card.active::before,.path-card:hover::before{transform:scaleY(1)}
+.path-icon{width:44px;height:44px;border-radius:var(--r-md);background:rgba(46,158,92,.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--green-mid);transition:background var(--dur)}
+.path-card.active .path-icon,.path-card:hover .path-icon{background:var(--green-mid);color:#fff}
+.path-icon svg{stroke:currentColor;transition:stroke 0s}
+.path-type{font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:.25rem;transition:color var(--dur)}
+.path-card.active .path-type,.path-card:hover .path-type{color:var(--green-mid)}
+.path-name{font-family:var(--display);font-size:1rem;font-weight:500;color:var(--green-deep);margin-bottom:.2rem}
+.path-desc{font-size:.8rem;color:var(--ink-muted);line-height:1.5}
+/* Right: form panel */
+.form-panel{background:var(--cream);border-radius:22px;padding:2.5rem;border:1px solid var(--line);position:sticky;top:100px}
+.form-panel-label{font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--green-mid);margin-bottom:.5rem}
+.form-panel-title{font-family:var(--display);font-size:1.35rem;font-weight:500;color:var(--green-deep);margin-bottom:1.75rem;line-height:1.25}
+.form-panel-title em{font-style:italic;color:var(--green-mid)}
+.form-group{display:flex;flex-direction:column;gap:.375rem;margin-bottom:1.125rem}
+.form-label{font-size:.8rem;font-weight:500;color:var(--green-deep)}
+.form-required{color:var(--green-mid)}
+.form-input,.form-select,.form-textarea{font-family:var(--sans);font-size:.9rem;padding:.75rem 1rem;border:1.5px solid var(--line);border-radius:var(--r-md);background:#fff;color:var(--ink);outline:none;transition:border-color var(--dur),box-shadow var(--dur);width:100%}
+.form-input:focus,.form-select:focus,.form-textarea:focus{border-color:var(--green-mid);box-shadow:0 0 0 3px rgba(46,158,92,.1)}
+.form-textarea{resize:vertical;min-height:110px;line-height:1.6}
+.form-submit{width:100%;justify-content:center;font-size:.95rem;padding:1rem 2rem;margin-top:.5rem}
+.form-success{display:none;text-align:center;padding:3rem 2rem}
+.form-success-check{width:56px;height:56px;background:rgba(46,158,92,.1);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem;color:var(--green-mid)}
+.form-success-title{font-family:var(--display);font-size:1.4rem;color:var(--green-deep);margin-bottom:.5rem}
+.form-success-sub{font-size:.875rem;color:var(--ink-muted);line-height:1.65}
+/* ═══ WHAT HAPPENS NEXT ═══ */
+.next-section{padding:2rem 2rem;background:#0d3325}
+.next-header{text-align:center;margin-bottom:3.5rem}
+/* Visual "what happens next" journey */
+.next-steps{display:flex;align-items:flex-start;gap:0;max-width:900px;margin:0 auto;position:relative}
+.next-steps::before{content:'';position:absolute;top:28px;left:28px;right:28px;height:1px;background:linear-gradient(to right,rgba(75,191,122,.35),rgba(75,191,122,.08));z-index:0}
+.next-step{flex:1;display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 1rem;position:relative;z-index:1}
+.next-step-num{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:1.125rem;flex-shrink:0;position:relative}
+.next-step-num-1{background:var(--green-mid)}
+.next-step-num-2{background:rgba(46,158,92,.25);border:1.5px solid rgba(46,158,92,.5)}
+.next-step-num-3{background:rgba(46,158,92,.15);border:1.5px solid rgba(46,158,92,.3)}
+.next-step-num-4{background:rgba(46,158,92,.08);border:1.5px dashed rgba(46,158,92,.35)}
+.next-step-label{font-size:.62rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:.375rem}
+.next-step-title{font-family:var(--display);font-size:.95rem;font-weight:500;color:#fff;margin-bottom:.375rem;line-height:1.3}
+.next-step-desc{font-size:.78rem;color:rgba(255,255,255,.5);line-height:1.55}
+/* ═══ PHOTO SECTION ═══ */
+.photo-split{display:grid;grid-template-columns:1fr 1fr;min-height:420px}
+.photo-left{background:#0d3325;position:relative;overflow:hidden;display:flex;align-items:flex-end}
+.photo-left-ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem}
+.photo-left-icon{opacity:.3}
+.photo-left-label{font-size:.65rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.3);text-align:center;padding:0 2rem;line-height:1.6}
+.photo-left-dir{padding:1.5rem 2rem;background:linear-gradient(to top,rgba(0,0,0,.55),transparent);width:100%;position:relative;z-index:2}
+.photo-right{background:#0d3325;padding:4rem 3.5rem;display:flex;flex-direction:column;justify-content:center}
+
 </style>
 </head>
 <body>
@@ -683,6 +741,20 @@ font-size:17px;
     <h1 class="page-h1">Ready to nourish <em>India's future?</em></h1>
     <p class="page-sub">Whether you are a foundation, CSR team, researcher, or individual who cares deeply — there is a place for you in this work.</p>
   </div>
+   <div class="hero__active" aria-hidden="true">
+    <div class="hero__active-item">
+      <div class="hero__active-dot" style="animation-delay:0s"></div>
+      <span>3 states · Active programme</span>
+    </div>
+    <div class="hero__active-item">
+      <div class="hero__active-dot" style="animation-delay:.7s"></div>
+      <span>Responds within 3–5 working days</span>
+    </div>
+    <div class="hero__active-item">
+      <div class="hero__active-dot" style="animation-delay:1.4s"></div>
+      <span>12A &amp; 80G registered</span>
+    </div>
+  </div>
 </section>
 
 <!-- PARTNER TIERS -->
@@ -714,74 +786,190 @@ font-size:17px;
   </div>
 </section>
 
-<!-- CONTACT FORM -->
-<section class="section section-white" id="contact-form" aria-labelledby="form-h">
-  <div class="container">
-    <div class="contact-grid">
-      <div class="rev-l">
-        <p class="label">Send Us a Message</p>
-        <h2 class="h2" id="form-h" style="margin-bottom:1.5rem">We respond within <em>2 working days.</em></h2>
-        <div class="contact-form-wrap">
+<!-- ═══ PATH SELECTOR + FORM ═══ -->
+<section class="paths-section" aria-labelledby="contact-h" id="contact">
+  <div class="paths-inner">
+    <div class="paths-left">
+      <p class="label rev">How would you like to engage?</p>
+      <h2 class="h2 rev" id="contact-h" style="margin-bottom:.75rem">Choose your<br><em>path.</em></h2>
+      <p class="paths-title-note rev">Select the type of engagement that best matches your intent. The form on the right will adapt to give you the most direct experience.</p>
+      <div class="path-cards" role="list" id="path-cards">
+
+        <button class="path-card active rev" data-type="csr" data-label="CSR Partnership" data-title="Tell us about your <em>organisation</em>" role="listitem">
+          <div class="path-icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><rect x="2" y="6" width="16" height="11" rx="2"/><path d="M7 6V5a3 3 0 016 0v1"/></svg>
+          </div>
+          <div class="path-content">
+            <div class="path-type">Corporate</div>
+            <div class="path-name">CSR Partnership</div>
+            <div class="path-desc">Fund or co-design school nutrition programmes under your CSR mandate</div>
+          </div>
+        </button>
+
+        <button class="path-card rev d1" data-type="grant" data-label="Grant Funding" data-title="Tell us about your <em>grant interest</em>" role="listitem">
+          <div class="path-icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M10 2l1.5 4.5H16L12.25 9l1.5 4.5L10 11l-3.75 2.5 1.5-4.5L4 6.5h4.5L10 2z" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="path-content">
+            <div class="path-type">Institutional</div>
+            <div class="path-name">Grant Funding</div>
+            <div class="path-desc">Support our flagship programme or emerging strategic initiatives</div>
+          </div>
+        </button>
+
+        <button class="path-card rev d2" data-type="school" data-label="School Partnership" data-title="Tell us about your <em>school</em>" role="listitem">
+          <div class="path-icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M2 18V9l8-6 8 6v9" stroke-linejoin="round"/><rect x="7" y="12" width="6" height="6"/></svg>
+          </div>
+          <div class="path-content">
+            <div class="path-type">Education</div>
+            <div class="path-name">School Partnership</div>
+            <div class="path-desc">Bring the School Nutrition Initiative to your school or network</div>
+          </div>
+        </button>
+
+        <button class="path-card rev" data-type="research" data-label="Research Collaboration" data-title="Tell us about your <em>research interest</em>" role="listitem">
+          <div class="path-icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="9" cy="9" r="6"/><path d="M16 16l-3-3"/></svg>
+          </div>
+          <div class="path-content">
+            <div class="path-type">Academic</div>
+            <div class="path-name">Research Collaboration</div>
+            <div class="path-desc">Partner on nutrition, M&amp;E, or food systems research</div>
+          </div>
+        </button>
+
+        <button class="path-card rev d1" data-type="volunteer" data-label="Volunteering" data-title="Tell us about your <em>skills and availability</em>" role="listitem">
+          <div class="path-icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M10 18c-4-2-7-5-7-9a7 7 0 0114 0c0 4-3 7-7 9z"/><circle cx="10" cy="9" r="2.5"/></svg>
+          </div>
+          <div class="path-content">
+            <div class="path-type">Individual</div>
+            <div class="path-name">Volunteer</div>
+            <div class="path-desc">Contribute as a nutrition educator, researcher, or field facilitator</div>
+          </div>
+        </button>
+
+        <button class="path-card rev d2" data-type="media" data-label="Media Enquiry" data-title="Tell us what you are <em>working on</em>" role="listitem">
+          <div class="path-icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><rect x="2" y="4" width="16" height="12" rx="2"/><path d="M6 8h8M6 11h5"/></svg>
+          </div>
+          <div class="path-content">
+            <div class="path-type">Media</div>
+            <div class="path-name">Press &amp; Media Enquiry</div>
+            <div class="path-desc">Journalism, documentary, podcast, or coverage requests</div>
+          </div>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- FORM PANEL -->
+    <div class="form-panel rev-r" id="form-panel">
+      <div id="form-wrap">
+        <div class="form-panel-label" id="form-label">CSR Partnership</div>
+        <div class="form-panel-title" id="form-title">Tell us about your <em>organisation</em></div>
+        <form id="contact-form" novalidate aria-label="Contact form">
           <div class="form-group">
-            <label class="form-label" for="name">Full Name</label>
-            <input class="form-input" type="text" id="name" placeholder="Your full name">
+            <label class="form-label" for="f-name">Full name <span class="form-required">*</span></label>
+            <input class="form-input" type="text" id="f-name" name="name" required autocomplete="name" placeholder="Your full name">
           </div>
           <div class="form-group">
-            <label class="form-label" for="org">Organisation</label>
-            <input class="form-input" type="text" id="org" placeholder="Your organisation">
+            <label class="form-label" for="f-email">Email address <span class="form-required">*</span></label>
+            <input class="form-input" type="email" id="f-email" name="email" required autocomplete="email" placeholder="you@organisation.com">
           </div>
           <div class="form-group">
-            <label class="form-label" for="email">Email Address</label>
-            <input class="form-input" type="email" id="email" placeholder="your@email.com">
+            <label class="form-label" for="f-org">Organisation / Company</label>
+            <input class="form-input" type="text" id="f-org" name="org" autocomplete="organization" placeholder="Where you work">
           </div>
           <div class="form-group">
-            <label class="form-label" for="type">I am interested in...</label>
-            <select class="form-select form-input" id="type">
-              <option value="">Select partnership type</option>
-              <option>Funding a school programme (CSR)</option>
-              <option>Foundation grant partnership</option>
-              <option>Research collaboration</option>
-              <option>Volunteering</option>
-              <option>Media / Press enquiry</option>
-              <option>General enquiry</option>
+            <label class="form-label" for="f-type">Engagement type <span class="form-required">*</span></label>
+            <select class="form-select" id="f-type" name="type" required>
+              <option value="csr">CSR Partnership</option>
+              <option value="grant">Grant Funding</option>
+              <option value="school">School Partnership</option>
+              <option value="research">Research Collaboration</option>
+              <option value="volunteer">Volunteer</option>
+              <option value="media">Media Enquiry</option>
+              <option value="general">General Enquiry</option>
             </select>
           </div>
           <div class="form-group">
-            <label class="form-label" for="message">Message</label>
-            <textarea class="form-textarea" id="message" placeholder="Tell us about your interest, your organisation, and how you imagine working together..."></textarea>
+            <label class="form-label" for="f-msg">Your message <span class="form-required">*</span></label>
+            <textarea class="form-textarea" id="f-msg" name="message" required placeholder="Tell us what you have in mind — the more specific, the better…"></textarea>
           </div>
-          <button class="btn btn-green" id="contact-submit" type="button" style="width:100%;justify-content:center">Send Message →</button>
-          <p style="font-size:.75rem;color:var(--muted);margin-top:.875rem;text-align:center">We reply to every enquiry personally. No auto-responses.</p>
+          <button type="submit" class="btn btn-primary form-submit">Send message
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </form>
+        <div class="form-success" id="form-success" role="status" aria-live="polite">
+          <div class="form-success-check" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M5 13l5 5 11-11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="form-success-title">Message received.</div>
+          <div class="form-success-sub">We aim to respond within 3-5 working days. For urgent partnership enquiries, please indicate this in your next message.</div>
         </div>
       </div>
-      <div class="contact-info rev-r">
-        <p class="label">Other Ways to Reach Us</p>
-        <div class="info-card">
-          <div class="info-icon">📧</div>
-          <div class="info-title">Email</div>
-          <div class="info-body">For partnerships, funding, and general enquiries.</div>
-          <span class="info-link">hello@bodhigreens.org</span>
-        </div>
-        <div class="info-card">
-          <div class="info-icon">📍</div>
-          <div class="info-title">Registered Office</div>
-          <div class="info-body">Pune, Maharashtra, India<br>Available for meetings by appointment.</div>
-        </div>
-        <div class="info-card">
-          <div class="info-icon">📄</div>
-          <div class="info-title">Request Documents</div>
-          <div class="info-body">80G certificate, audit reports, registration documents, and our full programme deck are available to verified enquirers.</div>
-          <span class="info-link">documents@bodhigreens.org</span>
-        </div>
-        <div style="background:linear-gradient(135deg,#014546 0%,#008c5b 100%);border-radius:14px;padding:2rem;color:#fff">
-          <div style="font-family:var(--display);font-size:1.1rem;font-weight:500;margin-bottom:.5rem">Join our mailing list</div>
-          <p style="font-size:.83rem;color:rgba(255,255,255,.68);margin-bottom:1.25rem;line-height:1.65">Quarterly field notes from our programmes. No spam. Unsubscribe any time.</p>
-          <div style="display:flex;gap:.625rem">
-            <input type="email" placeholder="your@email.com" style="flex:1;padding:.65rem 1rem;border:1.5px solid rgba(255,255,255,.25);border-radius:20px;background:rgba(255,255,255,.1);color:#fff;font-family:var(--sans);font-size:.85rem;outline:none">
-            <button class="btn btn-amber btn-sm" type="button">Subscribe</button>
+      <!-- Contact details -->
+      <div style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--line)">
+        <p style="font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:.875rem">Direct contact</p>
+        <div style="display:flex;flex-direction:column;gap:.625rem;font-size:.875rem;color:var(--ink-muted)">
+          <div style="display:flex;align-items:center;gap:.625rem">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M1.5 3.5a1 1 0 011-1h11a1 1 0 011 1v8a1 1 0 01-1 1h-11a1 1 0 01-1-1v-8z" stroke="var(--green-mid)" stroke-width="1.25"/><path d="M1.5 4l6 4.5L13.5 4" stroke="var(--green-mid)" stroke-width="1.25" stroke-linecap="round"/></svg>
+            contact@bodhigreensfoundation.org
+          </div>
+          <div style="display:flex;align-items:center;gap:.625rem">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 1.5C5.5 1.5 3 4 3 7c0 3.5 5 8.5 5 8.5s5-5 5-8.5c0-3-2.5-5.5-5-5.5z" stroke="var(--green-mid)" stroke-width="1.25"/><circle cx="8" cy="7" r="2" stroke="var(--green-mid)" stroke-width="1.25"/></svg>
+            India — Maharashtra, Delhi, Karnataka
+          </div>
+          <div style="display:flex;align-items:center;gap:.625rem">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="6.5" stroke="var(--green-mid)" stroke-width="1.25"/><path d="M8 4.5V8l2.5 2" stroke="var(--green-mid)" stroke-width="1.25" stroke-linecap="round"/></svg>
+            Response within 3-5 working days
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ WHAT HAPPENS NEXT ═══ -->
+<section class="next-section" aria-labelledby="next-h">
+  <div class="next-header">
+    <p class="label label-light" style="justify-content:center">After you reach out</p>
+    <h2 class="h2 h2-light" id="next-h" style="text-align:center">What happens <em>next.</em></h2>
+  </div>
+  <div class="next-steps" role="list">
+    <div class="next-step rev" role="listitem">
+      <div class="next-step-num next-step-num-1" aria-hidden="true">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.9)" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+      </div>
+      <div class="next-step-label">Immediate</div>
+      <div class="next-step-title">We read it</div>
+      <div class="next-step-desc">Every message is read by a person, not a chatbot. Your inquiry is triaged within 24 hours.</div>
+    </div>
+    <div class="next-step rev d1" role="listitem">
+      <div class="next-step-num next-step-num-2" aria-hidden="true">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.75)" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 4"/></svg>
+      </div>
+      <div class="next-step-label">3–5 working days</div>
+      <div class="next-step-title">We respond</div>
+      <div class="next-step-desc">A thoughtful reply from the team member best placed to help you — not a template.</div>
+    </div>
+    <div class="next-step rev d2" role="listitem">
+      <div class="next-step-num next-step-num-3" aria-hidden="true">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.65)" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+      </div>
+      <div class="next-step-label">Within 2 weeks</div>
+      <div class="next-step-title">We connect</div>
+      <div class="next-step-desc">For substantive partnerships, we schedule a call or meeting to explore the opportunity properly.</div>
+    </div>
+    <div class="next-step rev d3" role="listitem">
+      <div class="next-step-num next-step-num-4" aria-hidden="true">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.5)" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M12 22V12m0 0V2m0 10H2m10 0h10" stroke-dasharray="3 2"/></svg>
+      </div>
+      <div class="next-step-label">Ongoing</div>
+      <div class="next-step-title">We build together</div>
+      <div class="next-step-desc">Partnerships that start with the right conversation become the work that matters most.</div>
     </div>
   </div>
 </section>
@@ -879,6 +1067,33 @@ font-size:17px;
           <text x="42" y="422" font-family="Inter,sans-serif" font-size="9" fill="rgba(26,74,64,.55)">Emerging initiative</text>
         </g>
       </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PHOTO SECTION ═══ -->
+<section class="photo-split" aria-label="Programme context">
+  <div class="photo-left">
+    <div class="photo-left-ph" aria-hidden="true">
+      <img src = "assests\contact.png" 
+      style="width:100%;
+    max-width:500px;
+    height:auto;
+    display:block;
+    border-radius:24px;
+    object-fit:cover;
+    box-shadow:0 20px 50px rgba(0,0,0,.18);
+      ">
+    </div>
+  </div>
+  <div class="photo-right">
+    <p class="label label-light">Why reach out matters</p>
+    <h2 class="h2 h2-light" style="margin-bottom:1.25rem">We respond to <em>genuine</em> conversations.</h2>
+    <p style="font-size:.975rem;color:rgba(255,255,255,.65);line-height:1.78;margin-bottom:1.5rem">Bodhi Greens is built on relationships, not transactions. Every partnership begins with a real conversation — about what you care about, what we are trying to do, and whether there is genuine alignment.</p>
+    <p style="font-size:.875rem;color:rgba(255,255,255,.48);line-height:1.72;margin-bottom:2rem">We do not send template responses. We do not automate relationship-building. We read every message ourselves and respond when we have something real to say.</p>
+    <div style="display:flex;gap:.875rem;flex-wrap:wrap">
+      <a href="transparency.html" class="btn btn-ghost" style="font-size:.85rem;padding:.75rem 1.5rem">See our transparency page →</a>
+      <a href="impact.html" class="btn btn-ghost" style="font-size:.85rem;padding:.75rem 1.5rem">View our evidence →</a>
     </div>
   </div>
 </section>
@@ -1057,7 +1272,118 @@ font-size:17px;
   document.querySelectorAll('[data-count]').forEach(function(el){co.observe(el);});
   if(window.matchMedia('(prefers-reduced-motion:reduce)').matches){document.querySelectorAll('.rev,.rev-l,.rev-r').forEach(function(el){el.classList.add('on');});}
 })();
+document.addEventListener("DOMContentLoaded", () => {
 
+    const cards = document.querySelectorAll(".path-card");
+    const formLabel = document.getElementById("form-label");
+    const formTitle = document.getElementById("form-title");
+    const typeSelect = document.getElementById("f-type");
+    const form = document.getElementById("contact-form");
+    const success = document.getElementById("form-success");
+
+    /* -----------------------------
+       Card Selection
+    ----------------------------- */
+
+    cards.forEach(card => {
+
+        card.addEventListener("click", () => {
+
+            cards.forEach(c => c.classList.remove("active"));
+
+            card.classList.add("active");
+
+            formLabel.textContent = card.dataset.label;
+
+            formTitle.innerHTML = card.dataset.title;
+
+            typeSelect.value = card.dataset.type;
+
+        });
+
+    });
+
+
+    /* -----------------------------
+       Form Submit
+    ----------------------------- */
+
+    form.addEventListener("submit", function(e){
+
+        e.preventDefault();
+
+        const name = document.getElementById("f-name").value.trim();
+        const email = document.getElementById("f-email").value.trim();
+        const type = document.getElementById("f-type").value;
+        const message = document.getElementById("f-msg").value.trim();
+
+        if(name === ""){
+            alert("Please enter your full name.");
+            return;
+        }
+
+        if(email === ""){
+            alert("Please enter your email.");
+            return;
+        }
+
+        if(!validateEmail(email)){
+            alert("Please enter a valid email.");
+            return;
+        }
+
+        if(type === ""){
+            alert("Please select an engagement type.");
+            return;
+        }
+
+        if(message === ""){
+            alert("Please enter your message.");
+            return;
+        }
+
+        /* Hide Form */
+
+        form.style.display = "none";
+
+        /* Show Success */
+
+        success.style.display = "block";
+
+        /* Reset */
+
+        form.reset();
+
+        /* Default dropdown */
+
+        typeSelect.value = "csr";
+
+        /* Show form again after 5 sec */
+
+        setTimeout(()=>{
+
+            success.style.display="none";
+            form.style.display="block";
+
+        },5000);
+
+    });
+
+
+    /* -----------------------------
+       Email Validation
+    ----------------------------- */
+
+    function validateEmail(email){
+
+        const regex =
+        /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        return regex.test(email);
+
+    }
+
+});
 var btn=document.getElementById('contact-submit');
 if(btn){btn.addEventListener('click',function(){
   var n=document.getElementById('name').value;

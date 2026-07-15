@@ -246,6 +246,8 @@ img{display:block;width:100%;height:100%;object-fit:cover}
 .footer__legal{display:flex;gap:1.5rem}
 .footer__legal a{font-size:.75rem;color:rgba(255,255,255,.22);transition:color var(--dur)}
 .footer__legal a:hover{color:rgba(255,255,255,.5)}
+@media(max-width:900px){.nav__links{display:none}.nav__burger{display:flex}.footer__top{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.footer__top{grid-template-columns:1fr}.page-h1{font-size:2.2rem}}
 
 .stat-disclaimer{text-align:center;margin-top:1.25rem;font-size:.78rem;color:var(--ink-muted)}
 
@@ -867,7 +869,7 @@ font-size:17px;
   <div class="hero__content">
     <p class="hero__eyebrow rev">Building India's Future, One Meal at a Time</p>
     <h1 class="hero__h1 rev d1">Building <em>compassionate</em> food systems.</h1>
-    <p class="hero__sub rev d2">Bodhi Greens Foundation works at the intersection of child nutrition, compassion education, and food systems — in India's classrooms, kitchens, and gardens.</p>
+    <p class="hero__sub rev d2">Children are the entry point. Compassion is the destination. Food is the medium. We work at the intersection of nutrition, education, and community to build something that lasts.</p>
     <div class="hero__ctas rev d3">
       <a href="contact.html" class="btn btn-primary">Fund Our Work</a>
       <a href="our-work.html" class="btn btn-ghost">See What We Do</a>
@@ -1407,6 +1409,7 @@ font-size:17px;
     </div>
 
 </section>
+</main>
 <footer class="footer" role="contentinfo">
   <div class="footer__inner">
     <div class="footer__top">
@@ -1455,7 +1458,7 @@ font-size:17px;
     </div>
   </div>
 </footer>
-</main>
+
 <script>
 (function(){
   'use strict';

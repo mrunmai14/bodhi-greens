@@ -978,6 +978,115 @@ font-size:17px;
 }
 
 }
+.impact-journey-section{
+    background:var(--olive);
+    padding:20px 20px;
+}
+
+.change-header{
+    max-width:760px;
+    margin:0 auto 20px;
+    text-align:center;
+}
+
+.change-header .label{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-bottom:3px;
+}
+
+.change-header h2{
+    margin-bottom:3px;
+}
+
+.change-header p:last-child{
+    max-width:600px;
+    margin:0 auto;
+    color:rgba(255,255,255,.72);
+    line-height:1.8;
+    font-size:17px;
+}
+
+.impact-journey{
+    position:relative;
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:16px;
+}
+
+.journey-line{
+    position:absolute;
+    top:30px;
+    left:7%;
+    right:7%;
+    height:3px;
+    background:linear-gradient(
+        90deg,
+        #8B6914,
+        #2E9E5C,
+        #4BBF7A,
+        #2E9E5C,
+        #8B6914
+    );
+    border-radius:10px;
+    z-index:0;
+}
+
+.journey-item{
+    width:180px;
+    text-align:center;
+    position:relative;
+    z-index:2;
+}
+
+.journey-circle{
+    width:72px;
+    height:72px;
+    margin:0 auto 5px;
+    border-radius:50%;
+    background:#16362d;
+    border:3px solid #4BBF7A;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:30px;
+    transition:.35s;
+    box-shadow:0 12px 35px rgba(0,0,0,.2);
+}
+
+.journey-item:hover .journey-circle{
+    transform:translateY(-8px);
+    background:#2E9E5C;
+}
+
+.journey-item h4{
+    color: rgba(76, 151, 77, 0.65) ;
+    margin-bottom:8px;
+}
+
+.journey-item p{
+    color:rgba(31, 63, 50, 0.65);
+    font-size:14px;
+    line-height:1.6;
+}
+
+.journey-arrow{
+    margin-top:20px;
+    color:#4BBF7A;
+    font-size:30px;
+    font-weight:300;
+}
+/* Animated data chips on hero */
+.hero__chips{position:absolute;right:3rem;bottom:1rem;z-index:2;display:flex;flex-direction:column;gap:.875rem}
+.hero__chip{background:rgba(255,255,255,.07);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.12);border-radius:var(--r-lg);padding:1rem 1.25rem;min-width:180px}
+.hero__chip-num{font-family:var(--display);font-size:2rem;font-weight:700;color:var(--green);line-height:1;letter-spacing:-.03em}
+.hero__chip-lbl{font-size:.72rem;color:rgba(255,255,255,.55);line-height:1.4;margin-top:.25rem}
+.hero__chip-src{font-size:.62rem;color:rgba(255,255,255,.25);margin-top:.2rem}
+
 </style>
 </head>
 <body>
@@ -1022,6 +1131,24 @@ font-size:17px;
     <h1 class="page-h1">What we can honestly <em>report.</em></h1>
     <p class="page-sub">We believe honest impact reporting builds more trust than optimistic claims. Here is what we know, what we suspect, and what we are still learning.</p>
   </div>
+  <!-- Floating data chips -->
+  <div class="hero__chips" aria-hidden="true">
+    <div class="hero__chip">
+      <div class="hero__chip-num">35.5%</div>
+      <div class="hero__chip-lbl">Indian children under 5 are stunted</div>
+      <div class="hero__chip-src">NFHS-5, 2019–21</div>
+    </div>
+    <div class="hero__chip">
+      <div class="hero__chip-num">67%</div>
+      <div class="hero__chip-lbl">of childhood anaemia linked to diet</div>
+      <div class="hero__chip-src"><a href="https://www.unicef.org/india/nutrition" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;text-decoration-color:rgba(75,191,122,.4)">UNICEF, 2022 ↗</a></div>
+    </div>
+    <div class="hero__chip">
+      <div class="hero__chip-num">1 in 3</div>
+      <div class="hero__chip-lbl">adults: diet-related disease by 2035</div>
+      <div class="hero__chip-src"><a href="https://www.nin.res.in/downloads/DietaryGuidelinesforIndians.pdf" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;text-decoration-color:rgba(75,191,122,.4)">ICMR-NIN, 2024 ↗</a></div>
+    </div>
+  </div>
 </section>
 
 <!-- NUMBERS STRIP -->
@@ -1065,6 +1192,78 @@ font-size:17px;
       </div>
     </div>
   </div>
+</section>
+
+<section class="impact-journey-section">
+
+    <!-- Header -->
+    <div class="change-header">
+        <p class="label">How Change Happens</p>
+
+        <h2 class="h2">
+            Every Small Action <em>Creates Lasting Change</em>
+        </h2>
+
+        <p>
+            Change begins with one educator and grows through children,
+            families, communities, and eventually transforms the entire
+            food ecosystem.
+        </p>
+    </div>
+
+    <!-- Journey -->
+    <div class="impact-journey">
+
+        <div class="journey-line"></div>
+
+        <div class="journey-item">
+            <div class="journey-circle">🌱</div>
+            <h4>Individual</h4>
+            <p>Healthy habits begin with one person making informed food choices.</p>
+        </div>
+
+        <div class="journey-arrow">
+            →
+        </div>
+
+        <div class="journey-item">
+            <div class="journey-circle">🤲</div>
+            <h4>Family</h4>
+            <p>Individuals inspire healthier meals, conversations, and routines at home.</p>
+        </div>
+
+        <div class="journey-arrow">
+            →
+        </div>
+
+        <div class="journey-item">
+            <div class="journey-circle">🌿</div>
+            <h4>Community</h4>
+            <p>Families influence schools, neighbourhoods, and local food cultures, creating collective change.</p>
+        </div>
+
+        <div class="journey-arrow">
+            →
+        </div>
+
+        <div class="journey-item">
+            <div class="journey-circle">🍃</div>
+            <h4>Food System</h4>
+            <p>Growing demand for nutritious, sustainable food encourages farmers, markets, and institutions to adopt better practices.</p>
+        </div>
+
+        <div class="journey-arrow">
+            →
+        </div>
+
+        <div class="journey-item">
+            <div class="journey-circle">🌍</div>
+            <h4>Planet</h4>
+            <p>Healthier food systems support biodiversity, reduce environmental impact, and create a more resilient future for generations to come.</p>
+        </div>
+
+    </div>
+
 </section>
 <!-- HONEST NOTE -->
 <section class="section section-white" aria-labelledby="honest-h">
